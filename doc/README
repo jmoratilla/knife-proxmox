@@ -1,0 +1,30 @@
+[2012-10-07]
+
+This project is a plugin for knife that allows a user to list templates, create and delete 
+proxmox virtual machines (openvz instances mainly)
+
+I've two ways to do this:
+A) Create a knife plugin directly using command line tools (pvesh and pvesm)
+B) Create a provider for fog (github.com/fog/fog) and then create the knife plugin based on fog
+
+Thoughts:
+Option A is the easy quick and dirty solution for me now.
+Option B is the proper way to do it.  Unfortunately, I'm not able to afford it.  It's too complex.
+
+Actions:
+Option A)
+
+. knife proxmox template list
+|- pvesh get /nodes/SERVER_NAME/storage/STORAGE/content
+|--{
+      "content" : "vztmpl",
+      "format" : "tgz",
+      "size" : 161655654,
+      "volid" : "local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz"
+   },
+
+. knife proxmox server create
+|- pvesh create /nodes/localhost/openvz -ostemplate local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz -vmid 106 -cpus 1 -memory 1024 -disk 4 -hostname jorge_test
+
+. knife proxmox server destroy
+|- pvesh destroy 106
