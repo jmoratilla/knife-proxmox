@@ -42,3 +42,8 @@ response_status = RestClient.get(
 }
 
 #TODO: Acceso a la API: POST
+
+#TODO: Acceso a la API: PUT
+
+#TODO: Acceso a la API: DELETE
+
