@@ -54,69 +54,64 @@ site['access/ticket'].post :username=>username,:realm=>realm,:password=>password
   puts "#{response.code}" 
 end 
 
-headers = {
-  :CSRFPreventionToken => csrf_prevention_token,
-  :cookie => token
-}
 
 puts 'GET'.blue
 
-print ' To list all users on the cluster: '.yellow
+print ' list all users in the cluster: '.yellow
 site['access/users'].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
-print ' To list cluster resources: '.yellow
+print ' list cluster resources: '.yellow
 site['cluster/resources'].get :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
-print ' To list available templates for download: '.yellow
+print ' list available templates for download: '.yellow
 site["nodes/#{nodename}/aplinfo"].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
+  puts "#{response}"
 end
 
-print ' To list all VM\'s on a node: '.yellow
+print ' list all VM\'s on a node: '.yellow
 site["nodes/#{nodename}/openvz"].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 puts 'POST'.blue
 
-print ' To create a new user: '.yellow
-site['access/users'].post :userid => 'test2@pve', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+print ' create a new user: '.yellow
+site['access/users'].post 'userid=test2@pve', :CSRFPreventionToken => csrf_prevention_token,:cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 
-print ' To download a template: '.yellow
-site["nodes/#{nodename}/aplinfo"].post :node => nodename, :storage => 'local', :template => 'ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+print ' download a template: '.yellow
+site["nodes/#{nodename}/aplinfo"].post "node=#{nodename},storage=local,template=ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz", :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
-print ' To create an openvz VM: '.yellow
-site["nodes/#{nodename}/openvz"].post :node => nodename, :vmid => 401, :ostemplate => 'local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz', :CSRFPreventionToken=>csrf_prevention_token, :cookie=>token do |response, request, result, &block|
+print ' create an openvz VM: '.yellow
+site["nodes/#{nodename}/openvz"].post "node=#{nodename},vmid=401,ostemplate=local:vztmpl/ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz", :CSRFPreventionToken=>csrf_prevention_token, :cookie=>token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 
 puts 'PUT'.blue
 
-print ' To modify one user: '.yellow
-site['access/users/test@pve'].put :comment => 'hello world', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+print ' modify one user: '.yellow
+site['access/users/test@pve'].put 'comment=hello world', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 puts 'DELETE'.blue
 
-print ' To destroy an existing user: '.yellow
+print ' destroy an existing user: '.yellow
 site['access/users/test2@pve'].delete :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
-print ' To destroy an existing openvz VM: '.yellow
+print ' destroy an existing openvz VM: '.yellow
 site["nodes/#{nodename}/openvz/401"].delete :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
-
-#pp log
