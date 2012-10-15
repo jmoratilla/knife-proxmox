@@ -27,7 +27,7 @@ site = RestClient::Resource.new(url_base)
 
 puts 'AUTH'.blue
 
-print 'To request access: '.yellow
+print ' To request access: '.yellow
 site['access/ticket'].post :username=>username,:realm=>realm,:password=>password do |response, request, result, &block| 
   if response.code == 200 then
     data = JSON.parse(response.body)
@@ -44,35 +44,59 @@ end
 
 puts 'GET'.blue
 
-print 'To list cluster resources: '.yellow
+print ' To list all users on the cluster: '.yellow
+site['access/users'].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+  puts "#{response.code}"
+end
+
+print ' To list cluster resources: '.yellow
 site['cluster/resources'].get :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
-print 'To list available templates for download: '.yellow
+print ' To list available templates for download: '.yellow
 site['nodes/ankh/aplinfo'].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
-print 'To list all VM\'s on a node: '.yellow
+print ' To list all VM\'s on a node: '.yellow
 site['nodes/ankh/openvz'].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 puts 'POST'.blue
 
-print 'To download a template: '.yellow
-site['nodes/ankh/aplinfo'].post :CSRFPreventionToken => csrf_prevention_token, :cookie => token, :node => 'ankh', :storage => 'local', :template => 'ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz' do |response, request, result, &block|
+print ' To create a new user: '.yellow
+site['access/users'].post :userid => 'test2@pve', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
-print 'To create an openvz VM: '.yellow
-site['nodes/ankh/openvz?node=ankh&vmid=401&ostemplate=local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz'].post :CSRFPreventionToken=>csrf_prevention_token, :cookie=>token do |response, request, result, &block|
+print ' To download a template: '.yellow
+site['nodes/ankh/aplinfo'].post :node => 'ankh', :storage => 'local', :template => 'ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+  puts "#{response.code}"
+end
+
+print ' To create an openvz VM: '.yellow
+site['nodes/ankh/openvz'].post :node => 'ankh', :vmid => 401, :ostemplate => 'local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz', :CSRFPreventionToken=>csrf_prevention_token, :cookie=>token do |response, request, result, &block|
+  puts "#{response.code}"
+end
+
+
+puts 'PUT'.blue
+
+print ' To modify one user: '.yellow
+site['access/users/test@pve'].put :comment => 'hello world', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 puts 'DELETE'.blue
-print 'To destroy an existing openvz VM: '.yellow
+
+print ' To destroy an existing user: '.yellow
+site['access/users/test2@pve'].delete :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+  puts "#{response.code}"
+end
+
+print ' To destroy an existing openvz VM: '.yellow
 site['nodes/ankh/openvz/401'].delete :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
