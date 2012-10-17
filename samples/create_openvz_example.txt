@@ -1,0 +1,192 @@
+{
+  "startedDateTime": "2012-10-16T22:57:35.779Z",
+  "time": 50,
+  "request": {
+    "method": "POST",
+    "url": "https://localhost:8006/api2/extjs/nodes/ankh/openvz",
+    "httpVersion": "HTTP/1.1",
+    "headers": [
+      {
+        "name": "Cookie",
+        "value": "PVEAuthCookie=PVE%3Atest@pve%3A507DE52D%3A%3AS0yvtHR3uQLi9IjCDmvoRf0r/hM7HnyzziYg/Gxa8ryvZEnqososfjSB+fpzeiTbyY77g86B9MnFNR84ZFwANtuP50zuvFfHmr4Sf3k9GCvnN4+Z0GrEHqO7iD+tSMB2CAmDLBkWQentQ8NSFQbX8YbVD2mOhQYTjokYY+vWkMEe1sR1y0mOw+ZyYLgiHLQm7JUbE9ZX5ZiHVFcP8J1qaQRiZv7pJ6bzw0hTnY+pvOiY9djvnTrnD+DHVmDakofERpMPOHMvte8y0tnoR8Zs6vO6QU8AJAyI0pTCLmYmN98R/itGnjfuHfc4mW6bXaULqzjv60xb3P6HFnjMBFNBAg%3D%3D"
+      },
+      {
+        "name": "Origin",
+        "value": "https://localhost:8006"
+      },
+      {
+        "name": "Accept-Encoding",
+        "value": "gzip,deflate,sdch"
+      },
+      {
+        "name": "Accept-Language",
+        "value": "en-US,en;q=0.8"
+      },
+      {
+        "name": "CSRFPreventionToken",
+        "value": "507DE52D:PcwGWc3zqtXj3oZEqFsPdkgW8OE"
+      },
+      {
+        "name": "X-Requested-With",
+        "value": "XMLHttpRequest"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "Content-Length",
+        "value": "189"
+      },
+      {
+        "name": "Accept-Charset",
+        "value": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
+      },
+      {
+        "name": "Host",
+        "value": "localhost:8006"
+      },
+      {
+        "name": "User-Agent",
+        "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/x-www-form-urlencoded; charset=UTF-8"
+      },
+      {
+        "name": "Accept",
+        "value": "application/json"
+      },
+      {
+        "name": "Referer",
+        "value": "https://localhost:8006/"
+      }
+    ],
+    "queryString": [],
+    "cookies": [
+      {
+        "name": "PVEAuthCookie",
+        "value": "PVE%3Atest@pve%3A507DE52D%3A%3AS0yvtHR3uQLi9IjCDmvoRf0r/hM7HnyzziYg/Gxa8ryvZEnqososfjSB+fpzeiTbyY77g86B9MnFNR84ZFwANtuP50zuvFfHmr4Sf3k9GCvnN4+Z0GrEHqO7iD+tSMB2CAmDLBkWQentQ8NSFQbX8YbVD2mOhQYTjokYY+vWkMEe1sR1y0mOw+ZyYLgiHLQm7JUbE9ZX5ZiHVFcP8J1qaQRiZv7pJ6bzw0hTnY+pvOiY9djvnTrnD+DHVmDakofERpMPOHMvte8y0tnoR8Zs6vO6QU8AJAyI0pTCLmYmN98R/itGnjfuHfc4mW6bXaULqzjv60xb3P6HFnjMBFNBAg%3D%3D",
+        "expires": null,
+        "httpOnly": false,
+        "secure": false
+      }
+    ],
+    "headersSize": 999,
+    "bodySize": 189,
+    "postData": {
+      "mimeType": "application/x-www-form-urlencoded; charset=UTF-8",
+      "text": "vmid=104&hostname=melon&storage=local&password=melon123&ostemplate=local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz&memory=512&swap=512&disk=4&cpus=1&netif=ifname%3Deth0%2Cbridge%3Dvmbr0",
+      "params": [
+        {
+          "name": "vmid",
+          "value": "104"
+        },
+        {
+          "name": "hostname",
+          "value": "melon"
+        },
+        {
+          "name": "storage",
+          "value": "local"
+        },
+        {
+          "name": "password",
+          "value": "melon123"
+        },
+        {
+          "name": "ostemplate",
+          "value": "local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz"
+        },
+        {
+          "name": "memory",
+          "value": "512"
+        },
+        {
+          "name": "swap",
+          "value": "512"
+        },
+        {
+          "name": "disk",
+          "value": "4"
+        },
+        {
+          "name": "cpus",
+          "value": "1"
+        },
+        {
+          "name": "netif",
+          "value": "ifname%3Deth0%2Cbridge%3Dvmbr0"
+        }
+      ]
+    }
+  },
+  "response": {
+    "status": 200,
+    "statusText": "OK",
+    "httpVersion": "HTTP/1.1",
+    "headers": [
+      {
+        "name": "Date",
+        "value": "Tue, 16 Oct 2012 22:57:35 GMT"
+      },
+      {
+        "name": "Content-Encoding",
+        "value": "gzip"
+      },
+      {
+        "name": "Connection",
+        "value": "close"
+      },
+      {
+        "name": "Content-Length",
+        "value": "102"
+      },
+      {
+        "name": "Pragma",
+        "value": "no-cache"
+      },
+      {
+        "name": "Server",
+        "value": "Apache"
+      },
+      {
+        "name": "Vary",
+        "value": "Accept-Encoding"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json;charset=UTF-8"
+      },
+      {
+        "name": "Cache-control",
+        "value": "no-cache"
+      },
+      {
+        "name": "Expires",
+        "value": "Tue, 16 Oct 2012 22:57:35 GMT"
+      }
+    ],
+    "cookies": [],
+    "content": {
+      "size": 82,
+      "mimeType": "application/json",
+      "compression": -135
+    },
+    "redirectURL": "",
+    "headersSize": 288,
+    "bodySize": 217
+  },
+  "cache": {},
+  "timings": {
+    "blocked": 0,
+    "dns": -1,
+    "connect": 1,
+    "send": -1,
+    "wait": 46,
+    "receive": 1,
+    "ssl": 1
+  },
+  "pageref": "page_3"
+}

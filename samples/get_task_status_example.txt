@@ -1,0 +1,133 @@
+{
+  "startedDateTime": "2012-10-16T23:31:15.373Z",
+  "time": 9,
+  "request": {
+    "method": "GET",
+    "url": "https://localhost:8006/api2/json/nodes/ankh/tasks/UPID:ankh:0006017C:01A0D5FB:507DEE3F:download::test@pve:/status",
+    "httpVersion": "HTTP/1.1",
+    "headers": [
+      {
+        "name": "Cookie",
+        "value": "PVEAuthCookie=PVE%3Atest@pve%3A507DEC35%3A%3Am/UXZiom936ul12XnJjguTXnUFenGtA/xnW07AbDcHiFwevvQBkTNXRc9ZnlBMlP7UPSG6MPG307nv3nMXtmGztTtmeTNMkswGQc89oZR6YAtTGUPrBeiECDKjBb0zli+au9hwZEnSiM58onFIbpTvmCukY4nT/CVAm1ujbb6WzyYPurgK9uWVriO3KqKnLizbtItDWQvCtE/saHCyzDO6aV7RpafuqdHk90gVG/OxWDvg4TpsIGxtEE7K+JO2MTO+EYas7xAK640gIw2MCEMZ02tnarKttxlTNgnQ5IKyLlV5DnrWxtV3enGpHK+rtLxJBNCO84QYbf8ys5N9KsJg%3D%3D"
+      },
+      {
+        "name": "Accept-Encoding",
+        "value": "gzip,deflate,sdch"
+      },
+      {
+        "name": "Accept-Language",
+        "value": "en-US,en;q=0.8"
+      },
+      {
+        "name": "CSRFPreventionToken",
+        "value": "507DEC35:LLi1oDIMgmLbhjbbHms4R2U+U/0"
+      },
+      {
+        "name": "X-Requested-With",
+        "value": "XMLHttpRequest"
+      },
+      {
+        "name": "Connection",
+        "value": "keep-alive"
+      },
+      {
+        "name": "Accept-Charset",
+        "value": "ISO-8859-1,utf-8;q=0.7,*;q=0.3"
+      },
+      {
+        "name": "Host",
+        "value": "localhost:8006"
+      },
+      {
+        "name": "User-Agent",
+        "value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.52 Safari/536.5"
+      },
+      {
+        "name": "Accept",
+        "value": "application/json"
+      },
+      {
+        "name": "Referer",
+        "value": "https://localhost:8006/"
+      }
+    ],
+    "queryString": [],
+    "cookies": [
+      {
+        "name": "PVEAuthCookie",
+        "value": "PVE%3Atest@pve%3A507DEC35%3A%3Am/UXZiom936ul12XnJjguTXnUFenGtA/xnW07AbDcHiFwevvQBkTNXRc9ZnlBMlP7UPSG6MPG307nv3nMXtmGztTtmeTNMkswGQc89oZR6YAtTGUPrBeiECDKjBb0zli+au9hwZEnSiM58onFIbpTvmCukY4nT/CVAm1ujbb6WzyYPurgK9uWVriO3KqKnLizbtItDWQvCtE/saHCyzDO6aV7RpafuqdHk90gVG/OxWDvg4TpsIGxtEE7K+JO2MTO+EYas7xAK640gIw2MCEMZ02tnarKttxlTNgnQ5IKyLlV5DnrWxtV3enGpHK+rtLxJBNCO84QYbf8ys5N9KsJg%3D%3D",
+        "expires": null,
+        "httpOnly": false,
+        "secure": false
+      }
+    ],
+    "headersSize": 943,
+    "bodySize": 0
+  },
+  "response": {
+    "status": 200,
+    "statusText": "OK",
+    "httpVersion": "HTTP/1.1",
+    "headers": [
+      {
+        "name": "Date",
+        "value": "Tue, 16 Oct 2012 23:31:15 GMT"
+      },
+      {
+        "name": "Content-Encoding",
+        "value": "gzip"
+      },
+      {
+        "name": "Connection",
+        "value": "close"
+      },
+      {
+        "name": "Content-Length",
+        "value": "175"
+      },
+      {
+        "name": "Pragma",
+        "value": "no-cache"
+      },
+      {
+        "name": "Server",
+        "value": "Apache"
+      },
+      {
+        "name": "Vary",
+        "value": "Accept-Encoding"
+      },
+      {
+        "name": "Content-Type",
+        "value": "application/json;charset=UTF-8"
+      },
+      {
+        "name": "Cache-control",
+        "value": "no-cache"
+      },
+      {
+        "name": "Expires",
+        "value": "Tue, 16 Oct 2012 23:31:15 GMT"
+      }
+    ],
+    "cookies": [],
+    "content": {
+      "size": 207,
+      "mimeType": "application/json",
+      "compression": -74
+    },
+    "redirectURL": "",
+    "headersSize": 288,
+    "bodySize": 281
+  },
+  "cache": {},
+  "timings": {
+    "blocked": 0,
+    "dns": -1,
+    "connect": 1,
+    "send": -1,
+    "wait": 5,
+    "receive": 1,
+    "ssl": 1
+  }
+}

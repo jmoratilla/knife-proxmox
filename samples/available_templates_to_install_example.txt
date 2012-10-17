@@ -1,0 +1,664 @@
+{"os"=>"debian-6", "headline"=>"TurnKey Concrete5", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/concrete5", "description"=>"TurnKey Concrete5 - 
+Content Management System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "
+location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-concrete5_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-concrete5_1
+2.0-1_i386.tar.gz", "package"=>"turnkey-concrete5", "md5sum"=>"7418f625cb3b1dae07090659b187db80"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey PrestaShop", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/prestashop", "description"=>"TurnKey Presta
+Shop - Easy to use online shop", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openv
+z", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-prestashop_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnk
+ey-prestashop_11.3-1_i386.tar.gz", "package"=>"turnkey-prestashop", "md5sum"=>"7cca39fe304cba184490aa7e7453fc4d"}
+{"os"=>"debian-6", "headline"=>"TurnKey Joomla 2.5", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/joomla25", "description"=>"TurnKey Joomla 2.5 -
+ Cutting Edge Content Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"ope
+nvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-joomla25_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-jooml
+a25_12.0-1_i386.tar.gz", "package"=>"turnkey-joomla25", "md5sum"=>"a7edf47ad9d961db084d91614626d018"}
+{"os"=>"debian-6", "headline"=>"TurnKey Tomcat on Apache", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/tomcat-apache", "description"=>"TurnKey T
+omcat on Apache - Java Servlet and JSP Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve
+", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-tomcat-apache_12.0-1_i386.tar.gz", "template"=>"de
+bian-6-turnkey-tomcat-apache_12.0-1_i386.tar.gz", "package"=>"turnkey-tomcat-apache", "md5sum"=>"63ef9ae86a3d855b56a6ba2ce89344f2"}
+{"os"=>"debian-6", "headline"=>"TurnKey AppFlower", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/appflower", "description"=>"TurnKey AppFlower - 
+PHP Development framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "
+location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-appflower_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-appflower_1
+2.0-1_i386.tar.gz", "package"=>"turnkey-appflower", "md5sum"=>"a09a6b62ecb29a3d9b5fc207f9c0cb6d"}
+{"os"=>"debian-6", "headline"=>"TurnKey Etherpad", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/etherpad", "description"=>"TurnKey Etherpad - Rea
+ltime Document Collaboration", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz"
+, "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-etherpad_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-etherpad_
+12.0-1_i386.tar.gz", "package"=>"turnkey-etherpad", "md5sum"=>"c302b21c23607e30074c04631f440943"}
+{"os"=>"debian-6", "headline"=>"TurnKey Vanilla", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/vanilla", "description"=>"TurnKey Vanilla - Commun
+ity Forums Evolved", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locatio
+n"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-vanilla_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-vanilla_12.0-1_i386.
+tar.gz", "package"=>"turnkey-vanilla", "md5sum"=>"9ecbb91ef306f6649c5de9c3c5e52d5f"}
+{"os"=>"debian-6", "headline"=>"TurnKey Jenkins", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/jenkins", "description"=>"TurnKey Jenkins - Contin
+uas Integration", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=
+>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-jenkins_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-jenkins_12.0-1_i386.tar
+.gz", "package"=>"turnkey-jenkins", "md5sum"=>"306fac73feeac699aaaf6fc9cb81c7f6"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey TWiki", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/twiki", "description"=>"TurnKey TWiki - Enterpri
+se Wiki Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"
+=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-twiki_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-twiki_11.3-1_i38
+6.tar.gz", "package"=>"turnkey-twiki", "md5sum"=>"40f010baa0e041e8f11e08c371fb1bef"}
+{"os"=>"debian-6", "headline"=>"TurnKey Piwik", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/piwik", "description"=>"TurnKey Piwik - Real Time We
+b Analytics", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"ht
+tp://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-piwik_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-piwik_12.0-1_i386.tar.gz", "p
+ackage"=>"turnkey-piwik", "md5sum"=>"a80c14894b58dc264c5384d502b14d8e"}
+{"os"=>"debian-6", "headline"=>"TurnKey Plone", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/plone", "description"=>"TurnKey Plone - Open Source 
+Content Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locatio
+n"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-plone_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-plone_12.0-1_i386.tar.
+gz", "package"=>"turnkey-plone", "md5sum"=>"827f2bf142e911f22af294481b598714"}
+{"os"=>"debian-6", "headline"=>"TurnKey ownCloud", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/owncloud", "description"=>"TurnKey ownCloud - Sha
+re files, music, calendar", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "
+location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-owncloud_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-owncloud_12.
+0-1_i386.tar.gz", "package"=>"turnkey-owncloud", "md5sum"=>"4580e56fd9af72cc3818633cf3919a98"}
+{"os"=>"debian-6", "headline"=>"TurnKey iceScrum", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/icescrum", "description"=>"TurnKey iceScrum - Agi
+le Development", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>
+"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-icescrum_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-icescrum_12.0-1_i386.ta
+r.gz", "package"=>"turnkey-icescrum", "md5sum"=>"778fc5c11613078a28e46b6518344e55"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Ruby on Rails", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/rails", "description"=>"TurnKey Ruby on 
+Rails - Web Application Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"op
+envz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-rails_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey
+-rails_11.3-1_i386.tar.gz", "package"=>"turnkey-rails", "md5sum"=>"165699a44e402bf3e061569f931dd59d"}
+{"os"=>"debian-6", "headline"=>"TurnKey CakePHP", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/cakephp", "description"=>"TurnKey CakePHP - PHP Fr
+amework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http:/
+/downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-cakephp_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-cakephp_12.0-1_i386.tar.gz", "p
+ackage"=>"turnkey-cakephp", "md5sum"=>"82c6f92a2f0bf110cfc6391f1df2c415"}
+{"os"=>"debian-6", "headline"=>"TurnKey Gallery", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/gallery", "description"=>"TurnKey Gallery - Photo 
+Album Organizer", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=
+>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-gallery_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-gallery_12.0-1_i386.tar
+.gz", "package"=>"turnkey-gallery", "md5sum"=>"f70dc533885b7f5202d2c8175e664b41"}
+{"os"=>"debian-6", "headline"=>"TurnKey MongoDB", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/mongodb", "description"=>"TurnKey MongoDB - NoSQL 
+Database", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http:
+//downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-mongodb_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-mongodb_12.0-1_i386.tar.gz", "
+package"=>"turnkey-mongodb", "md5sum"=>"71bff777ce1c04465fb55112091eee02"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Movable Type", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/movabletype", "description"=>"TurnKey Mov
+able Type - Professional Publishing Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", 
+"type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-movabletype_11.3-1_i386.tar.gz", "template"=>"ubu
+ntu-10.04-turnkey-movabletype_11.3-1_i386.tar.gz", "package"=>"turnkey-movabletype", "md5sum"=>"5ee039fb6dcefb69ae628f91a72616ed"}
+{"os"=>"debian-6", "headline"=>"TurnKey Revision Control", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/revision-control", "description"=>"TurnKe
+y Revision Control - All-in-one code repository", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve
+", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-revision-control_12.0-1_i386.tar.gz", "template"=>
+"debian-6-turnkey-revision-control_12.0-1_i386.tar.gz", "package"=>"turnkey-revision-control", "md5sum"=>"8f7cfbcae82d16d1cd91a16b8b2e3c5c"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey ejabberd", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/ejabberd", "description"=>"TurnKey ejabberd -
+ XMPP and Web Chat", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locatio
+n"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-ejabberd_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-ejabberd_11
+.3-1_i386.tar.gz", "package"=>"turnkey-ejabberd", "md5sum"=>"959420b9fa56e084d741278f5601a937"}
+{"os"=>"debian-6", "headline"=>"TurnKey Trac", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/trac", "description"=>"TurnKey Trac - Integrated SCM 
+& Project Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locat
+ion"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-trac_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-trac_12.0-1_i386.tar.
+gz", "package"=>"turnkey-trac", "md5sum"=>"b3851421891fbe8393522eddbb2accbe"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey LAMP Stack", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/lamp", "description"=>"TurnKey LAMP Stack -
+ Web Stack (MySQL)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locatio
+n"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-lamp_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-lamp_11.3-1_i38
+6.tar.gz", "package"=>"turnkey-lamp", "md5sum"=>"74e61eae3380063d54ba6384f5bc783a"}
+{"os"=>"debian-6", "headline"=>"TurnKey PHPlist", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/phplist", "description"=>"TurnKey PHPlist - Email 
+Campaign Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-phplist_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-phplist_12.0-1_i386
+.tar.gz", "package"=>"turnkey-phplist", "md5sum"=>"3420077abc2a8a363c485d031b1d472b"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey DokuWiki", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/dokuwiki", "description"=>"TurnKey DokuWiki -
+ Documentation Wiki Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz"
+, "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-dokuwiki_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-d
+okuwiki_11.3-1_i386.tar.gz", "package"=>"turnkey-dokuwiki", "md5sum"=>"3855918943ae719a3d7d4db92050ad51"}
+{"os"=>"debian-6", "headline"=>"TurnKey LimeSurvey", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/limesurvey", "description"=>"TurnKey LimeSurvey
+ - Survey Application", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "loca
+tion"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-limesurvey_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-limesurvey_12.
+0-1_i386.tar.gz", "package"=>"turnkey-limesurvey", "md5sum"=>"0124938d792d03e5ab385bb351908c58"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Bugzilla", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/bugzilla", "description"=>"TurnKey Bugzilla -
+ Bug Tracking System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locat
+ion"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-bugzilla_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-bugzilla_
+11.3-1_i386.tar.gz", "package"=>"turnkey-bugzilla", "md5sum"=>"570cdd06a3be9a25ab7056cee44bdeaf"}
+{"os"=>"debian-6", "headline"=>"TurnKey Collabtive", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/collabtive", "description"=>"TurnKey Collabtive
+ - GroupWare Software", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "loca
+tion"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-collabtive_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-collabtive_12.
+0-1_i386.tar.gz", "package"=>"turnkey-collabtive", "md5sum"=>"a8cfcba30cd7fc652494586b0ebe74d0"}
+{"os"=>"debian-6", "headline"=>"TurnKey Roundup", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/roundup", "description"=>"TurnKey Roundup - Issue 
+Tracking System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=
+>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-roundup_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-roundup_12.0-1_i386.tar
+.gz", "package"=>"turnkey-roundup", "md5sum"=>"9ea839b06e8f08dba5c527551146f77d"}
+{"os"=>"debian-5.0", "headline"=>"Debian 5.0 (standard)", "version"=>"5.0-2", "infopage"=>"http://pve.proxmox.com/wiki/Debian_5.0_Standard", "description"=>"A sma
+ll Debian Lenny system including all standard packages.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"
+http://download.proxmox.com/appliances/system/debian-5.0-standard_5.0-2_i386.tar.gz", "template"=>"debian-5.0-standard_5.0-2_i386.tar.gz", "maintainer"=>"Proxmox 
+Support Team <support@proxmox.com>", "package"=>"debian-5.0-standard", "md5sum"=>"1b7b57208bfa486cb84e39f765e0c1bb"}
+{"os"=>"debian-6", "headline"=>"TurnKey Symfony", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/symfony", "description"=>"TurnKey Symfony - PHP We
+b Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"ht
+tp://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-symfony_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-symfony_12.0-1_i386.tar.gz"
+, "package"=>"turnkey-symfony", "md5sum"=>"f6b6ba31bd77b4108e25e8909ca89235"}
+{"os"=>"debian-6", "headline"=>"TurnKey SimpleInvoices", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/simpleinvoices", "description"=>"TurnKey Si
+mpleInvoices - Invoicing System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"open
+vz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-simpleinvoices_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-
+simpleinvoices_12.0-1_i386.tar.gz", "package"=>"turnkey-simpleinvoices", "md5sum"=>"a215dc94551dab1ba52e79956cd846ed"}
+{"os"=>"debian-6.0", "headline"=>"SugarCRM customer relationship management", "version"=>"6.1.4-1", "infopage"=>"http://pve.proxmox.com/wiki/SugarCRM", "descripti
+on"=>"SugarCRM is the world's leading provider of commercial open source customer relationship management (CRM) software for companies of all sizes. Sugar easily 
+adapts to any business environment by offering a more flexible, cost-effective alternative than proprietary applications. SugarCRM's open source architecture allo
+ws companies to more easily customize and integrate customer-facing business processes in order to build and maintain more profitable relationships.", "manageurl"
+=>"http://__IPADDRESS__/", "section"=>"www", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/applia
+nces/www/debian-6.0-sugarcrm_6.1.4-1_i386.tar.gz", "template"=>"debian-6.0-sugarcrm_6.1.4-1_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com
+>", "package"=>"sugarcrm", "md5sum"=>"25edf8711a9121bf62bb7d94f851fc67"}
+{"os"=>"debian-6", "headline"=>"TurnKey e107", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/e107", "description"=>"TurnKey e107 - Content Managem
+ent System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"htt
+p://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-e107_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-e107_12.0-1_i386.tar.gz", "pack
+age"=>"turnkey-e107", "md5sum"=>"c3326374f882e23fdeda44ad7fbd5678"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Tomcat on Apache", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/tomcat-apache", "description"=>"TurnK
+ey Tomcat on Apache - Java Servlet and JSP Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org
+/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-tomcat-apache_11.3-1_i386.tar.gz", "templa
+te"=>"ubuntu-10.04-turnkey-tomcat-apache_11.3-1_i386.tar.gz", "package"=>"turnkey-tomcat-apache", "md5sum"=>"4fae1d1793677406260d81404edb9eb4"}
+{"os"=>"debian-6", "headline"=>"TurnKey Mahara", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/mahara", "description"=>"TurnKey Mahara - Electroni
+c Portfolio", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"ht
+tp://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-mahara_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-mahara_12.0-1_i386.tar.gz", 
+"package"=>"turnkey-mahara", "md5sum"=>"ff3407696a275a80d3610fb72aff3c7f"}
+{"os"=>"debian-6", "headline"=>"TurnKey SilverStripe", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/silverstripe", "description"=>"TurnKey Silver
+Stripe - CMS and Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", 
+"location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-silverstripe_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-silvers
+tripe_12.0-1_i386.tar.gz", "package"=>"turnkey-silverstripe", "md5sum"=>"33fa7756aa8d7f958f20fc08e7ba8b23"}
+{"os"=>"debian-6", "headline"=>"TurnKey Joomla 1.5", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/joomla15", "description"=>"TurnKey Joomla 1.5 -
+ Cutting Edge Content Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"ope
+nvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-joomla15_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-jooml
+a15_12.0-1_i386.tar.gz", "package"=>"turnkey-joomla15", "md5sum"=>"a5b651cd166a2c9a6e41acc21bda4c57"}
+{"os"=>"debian-6", "headline"=>"TurnKey Mibew", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/mibew", "description"=>"TurnKey Mibew - Live Support
+ Chat", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http://d
+ownloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-mibew_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-mibew_12.0-1_i386.tar.gz", "package
+"=>"turnkey-mibew", "md5sum"=>"5d2d2e3c73f6f02be1d641a8309fd3a8"}
+{"os"=>"debian-6", "headline"=>"TurnKey DokuWiki", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/dokuwiki", "description"=>"TurnKey DokuWiki - Doc
+umentation Wiki Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-dokuwiki_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-dokuwiki_12.0
+-1_i386.tar.gz", "package"=>"turnkey-dokuwiki", "md5sum"=>"8d3af4ea02b62019f127f60f99eaefe5"}
+{"os"=>"debian-6", "headline"=>"TurnKey Mantis", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/mantis", "description"=>"TurnKey Mantis - Bug Track
+ing System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"htt
+p://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-mantis_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-mantis_12.0-1_i386.tar.gz", "
+package"=>"turnkey-mantis", "md5sum"=>"12671c961dc1f6fc81c6e6a4db4aef9b"}
+{"os"=>"debian-6", "headline"=>"TurnKey Process Maker", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/processmaker", "description"=>"TurnKey Proce
+ss Maker - Workflow & BPM software", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"o
+penvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-processmaker_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey
+-processmaker_12.0-1_i386.tar.gz", "package"=>"turnkey-processmaker", "md5sum"=>"371d12b446c3187c834f59b5e4064de1"}
+{"os"=>"debian-6", "headline"=>"TurnKey BambooInvoice", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/bambooinvoice", "description"=>"TurnKey Bamb
+ooInvoice - Invoicing system", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz"
+, "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-bambooinvoice_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-bamb
+ooinvoice_12.0-1_i386.tar.gz", "package"=>"turnkey-bambooinvoice", "md5sum"=>"ff677cdb9afda3bc3a7720619ad7cd44"}
+{"os"=>"debian-6", "headline"=>"TurnKey File Server", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/fileserver", "description"=>"TurnKey File Serv
+er - Simple Network Attached Storage", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>
+"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-fileserver_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey
+-fileserver_12.0-1_i386.tar.gz", "package"=>"turnkey-fileserver", "md5sum"=>"d2f9676758ca106f36f9b060cb7e0297"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey vTiger CRM", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/vtiger", "description"=>"TurnKey vTiger CRM
+ - Customer Relationship Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"
+openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-vtiger_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turn
+key-vtiger_11.3-1_i386.tar.gz", "package"=>"turnkey-vtiger", "md5sum"=>"1b23bc1adef1f555318e1ab7e20c2d31"}
+{"os"=>"debian-6", "headline"=>"TurnKey Xoops", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/xoops", "description"=>"TurnKey Xoops - Web Applicat
+ion System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"htt
+p://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-xoops_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-xoops_12.0-1_i386.tar.gz", "pa
+ckage"=>"turnkey-xoops", "md5sum"=>"711f498c63905306ec50ab09e3c4651a"}
+{"os"=>"debian-6.0", "headline"=>"Debian 6.0 (standard)", "version"=>"6.0-4", "infopage"=>"http://pve.proxmox.com/wiki/Debian_6.0_Standard", "description"=>"A sma
+ll Debian Squeeze system including all standard packages.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=
+>"http://download.proxmox.com/appliances/system/debian-6.0-standard_6.0-4_i386.tar.gz", "template"=>"debian-6.0-standard_6.0-4_i386.tar.gz", "maintainer"=>"Proxmo
+x Support Team <support@proxmox.com>", "package"=>"debian-6.0-standard", "md5sum"=>"3fd6d6a507874a12bd4f7b4efbc4238d"}
+{"os"=>"debian-6", "headline"=>"TurnKey Magento", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/magento", "description"=>"TurnKey Magento - Flexib
+le eCommerce Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "loca
+tion"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-magento_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-magento_12.0-1_i3
+86.tar.gz", "package"=>"turnkey-magento", "md5sum"=>"538ab058851f7f18d5e652acc5af14b6"}
+{"os"=>"ubuntu-8.04", "headline"=>"Ubuntu Hardy (standard)", "version"=>"8.04-3", "infopage"=>"http://pve.proxmox.com/wiki/Ubuntu_Hardy_Standard", "description"=>
+"A small Ubuntu Hardy system including all standard packages.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "locati
+on"=>"http://download.proxmox.com/appliances/system/ubuntu-8.04-standard_8.04-3_i386.tar.gz", "template"=>"ubuntu-8.04-standard_8.04-3_i386.tar.gz", "package"=>"u
+buntu-8.04-standard", "md5sum"=>"2c8ba5f36e94d95f3d0d535489f60e77"}
+{"os"=>"debian-6.0", "headline"=>"Extensible trouble-ticket tracking system", "version"=>"3.8.8-2", "infopage"=>"http://pve.proxmox.com/wiki/RT_Request_Tracker", 
+"description"=>"Request Tracker (RT) is an enterprise-grade ticketing system which enables a group of people to intelligently and efficiently manage tasks, issues
+, and requests submitted by a community of users. It features a web, email and command-line interfaces.", "manageurl"=>"http://__IPADDRESS__/rt/", "section"=>"adm
+in", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/admin/debian-6.0-request-tracker_3.
+8.8-2_i386.tar.gz", "template"=>"debian-6.0-request-tracker_3.8.8-2_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "package"=>"request-
+tracker", "md5sum"=>"ccc6a2e4a0978ed6a209d48ff1e0995f"}
+{"os"=>"debian-6.0", "headline"=>"Joomla! Content Management", "version"=>"1.6-3", "infopage"=>"http://pve.proxmox.com/wiki/Joomla!", "description"=>"Joomla! is o
+ne of the most powerful Open Source Content Management  Systems on the planet. It is used all over the world for everything from  simple websites to complex corpo
+rate applications. Joomla! is easy to  install, simple to manage, and reliable.", "manageurl"=>"http://__IPADDRESS__/", "section"=>"www", "source"=>"http://downlo
+ad.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/www/debian-6.0-joomla_1.6-3_i386.tar.gz", "template"=>"debian-6.
+0-joomla_1.6-3_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "package"=>"joomla", "md5sum"=>"158524c40fd3b76ebc481d20c2bfe300"}
+{"os"=>"debian-6", "headline"=>"TurnKey eZPublish", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/ezpublish", "description"=>"TurnKey eZPublish - 
+Content Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locatio
+n"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-ezpublish_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-ezpublish_12.0-1_i
+386.tar.gz", "package"=>"turnkey-ezpublish", "md5sum"=>"9aa3ca130e14657277c28fa895cf4088"}
+{"os"=>"debian-6", "headline"=>"TurnKey Ushahidi", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/ushahidi", "description"=>"TurnKey Ushahidi - Cro
+wdsource Information", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locat
+ion"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-ushahidi_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-ushahidi_12.0-1_i
+386.tar.gz", "package"=>"turnkey-ushahidi", "md5sum"=>"56b6ba78aae84a339813de0994a564f5"}
+{"os"=>"debian-6", "headline"=>"TurnKey Typo3", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/typo3", "description"=>"TurnKey Typo3 - Enterprise C
+MS", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http://down
+loads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-typo3_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-typo3_12.0-1_i386.tar.gz", "package"=>
+"turnkey-typo3", "md5sum"=>"a81f532f02fbf6120f9ff4883e1e08e7"}
+{"os"=>"debian-6", "headline"=>"TurnKey App Engine Go", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/appengine-go", "description"=>"TurnKey App E
+ngine Go - Google App Engine SDK (Go)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=
+>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-appengine-go_12.0-1_i386.tar.gz", "template"=>"debian-6-turn
+key-appengine-go_12.0-1_i386.tar.gz", "package"=>"turnkey-appengine-go", "md5sum"=>"cdde47b9f03179e2e7fdc8260f23aeb2"}
+{"os"=>"debian-6", "headline"=>"TurnKey ClipBucket", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/clipbucket", "description"=>"TurnKey ClipBucket
+ - Video sharing", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"
+=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-clipbucket_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-clipbucket_12.0-1_i
+386.tar.gz", "package"=>"turnkey-clipbucket", "md5sum"=>"8c48cd33309de70e66279ec9f5910837"}
+{"os"=>"debian-6", "headline"=>"TurnKey Pligg", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/pligg", "description"=>"TurnKey Pligg - Social publi
+shing CMS", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http
+://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-pligg_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-pligg_12.0-1_i386.tar.gz", "pac
+kage"=>"turnkey-pligg", "md5sum"=>"90a9cb801bbafe0c73d27dd968ca6d0b"}
+{"os"=>"debian-6", "headline"=>"TurnKey Sahana Eden", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/sahana-eden", "description"=>"TurnKey Sahana E
+den - Humanitarian response", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz",
+ "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-sahana-eden_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-sahana-
+eden_12.0-1_i386.tar.gz", "package"=>"turnkey-sahana-eden", "md5sum"=>"63bc6c02d0aa2b62423e877dbb69b37a"}
+{"os"=>"debian-6", "headline"=>"TurnKey WordPress", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/wordpress", "description"=>"TurnKey WordPress - 
+Blog Publishing Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-wordpress_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-wordpress_12
+.0-1_i386.tar.gz", "package"=>"turnkey-wordpress", "md5sum"=>"4d3f2a9ea5f25d1da49140e4289055ae"}
+{"os"=>"debian-6", "headline"=>"TurnKey phpBB", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/phpbb", "description"=>"TurnKey phpBB - Community Fo
+rum Solution", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"h
+ttp://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-phpbb_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-phpbb_12.0-1_i386.tar.gz", "
+package"=>"turnkey-phpbb", "md5sum"=>"c05cb1e17509095f7fbb0a19df9a3c34"}
+{"os"=>"debian-6", "headline"=>"TurnKey MediaWiki", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/mediawiki", "description"=>"TurnKey MediaWiki - 
+Wikipedia's Wiki Engine", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "lo
+cation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-mediawiki_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-mediawiki_12.
+0-1_i386.tar.gz", "package"=>"turnkey-mediawiki", "md5sum"=>"15bb7223b7a2909df81acbe16c41d434"}
+{"os"=>"debian-6", "headline"=>"TurnKey TomatoCart", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/tomatocart", "description"=>"TurnKey TomatoCart
+ - eCommerce Shopping Cart", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", 
+"location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-tomatocart_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-tomatocar
+t_12.0-1_i386.tar.gz", "package"=>"turnkey-tomatocart", "md5sum"=>"b0ab539f049cf4a2bb3575c1fec08ede"}
+{"os"=>"debian-6", "headline"=>"TurnKey Nginx PHP FastCGI Server", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/nginx-php-fastcgi", "description"
+=>"TurnKey Nginx PHP FastCGI Server - Includes PHPMyAdmin and MySQL", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.
+turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-nginx-php-fastcgi_12.0-1_i386.
+tar.gz", "template"=>"debian-6-turnkey-nginx-php-fastcgi_12.0-1_i386.tar.gz", "package"=>"turnkey-nginx-php-fastcgi", "md5sum"=>"b0bbab76df68e1d14f62ab0b4e5a0f37"
+}
+{"os"=>"debian-6", "headline"=>"TurnKey Redmine", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/redmine", "description"=>"TurnKey Redmine - Integr
+ated SCM & Project Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz
+", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-redmine_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-redmine_1
+2.0-1_i386.tar.gz", "package"=>"turnkey-redmine", "md5sum"=>"c1a1f7ae36cd8bca9825b61d787dcc37"}
+{"os"=>"debian-6", "headline"=>"TurnKey Ruby on Rails", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/rails", "description"=>"TurnKey Ruby on Rail
+s - Web Application Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz
+", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-rails_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-rails_12.0-
+1_i386.tar.gz", "package"=>"turnkey-rails", "md5sum"=>"d6c02bb52b4e34675ca0b8a1e1d499e7"}
+{"os"=>"debian-6", "headline"=>"TurnKey Drupal 6", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/drupal6", "description"=>"TurnKey Drupal 6 - Cont
+ent Management Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-drupal6_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-drupal6_12.0-1
+_i386.tar.gz", "package"=>"turnkey-drupal6", "md5sum"=>"a0c9762dae1cfc767ce5dc02c7293a9b"}
+{"os"=>"debian-6", "headline"=>"TurnKey GitLab", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/gitlab", "description"=>"TurnKey GitLab - Self Host
+ed Git Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location
+"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-gitlab_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-gitlab_12.0-1_i386.tar
+.gz", "package"=>"turnkey-gitlab", "md5sum"=>"a865ec38eb25c4ee7e076b5340ef7646"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey LAPP", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/lapp", "description"=>"TurnKey LAPP - Web Stack (
+PostgreSQL)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"ht
+tp://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-lapp_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-lapp_11.3-1_i386.tar.g
+z", "package"=>"turnkey-lapp", "md5sum"=>"95ea0b5180817cd336ebcfb28fc01e25"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Redmine", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/redmine", "description"=>"TurnKey Redmine - In
+tegrated SCM & Project Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"op
+envz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-redmine_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnk
+ey-redmine_11.3-1_i386.tar.gz", "package"=>"turnkey-redmine", "md5sum"=>"868bab0547e9d656ca403cfa6df4d468"}
+{"os"=>"debian-6", "headline"=>"TurnKey OpenPhoto", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/openphoto", "description"=>"TurnKey OpenPhoto - 
+Photo Application", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location
+"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-openphoto_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-openphoto_12.0-1_i3
+86.tar.gz", "package"=>"turnkey-openphoto", "md5sum"=>"ec393bdff6779923a12edf7da1f5f099"}
+{"os"=>"debian-6", "headline"=>"TurnKey App Engine Python", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/appengine-python", "description"=>"TurnK
+ey App Engine Python - Google App Engine SDK (Python)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.o
+rg/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-appengine-python_12.0-1_i386.tar.gz", "templ
+ate"=>"debian-6-turnkey-appengine-python_12.0-1_i386.tar.gz", "package"=>"turnkey-appengine-python", "md5sum"=>"e2f3eeb929c8c9096b6653f8ed9a399b"}
+{"os"=>"debian-6", "headline"=>"TurnKey PostgreSQL", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/postgresql", "description"=>"TurnKey PostgreSQL
+ - Object-relational Database System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>
+"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-postgresql_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey
+-postgresql_12.0-1_i386.tar.gz", "package"=>"turnkey-postgresql", "md5sum"=>"5eac43be50da9560d813c8f0c0f8b05e"}
+{"os"=>"debian-6", "headline"=>"TurnKey MySQL", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/mysql", "description"=>"TurnKey MySQL - Relational D
+atabase Management System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "
+location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-mysql_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-mysql_12.0-1_i3
+86.tar.gz", "package"=>"turnkey-mysql", "md5sum"=>"e9cd44124e8e3a2c2c875106c7a6c715"}
+{"os"=>"debian-6", "headline"=>"TurnKey Standalone Tomcat", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/tomcat", "description"=>"TurnKey Standal
+one Tomcat - Java Servlet and JSP Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "t
+ype"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-tomcat_12.0-1_i386.tar.gz", "template"=>"debian-6-turnk
+ey-tomcat_12.0-1_i386.tar.gz", "package"=>"turnkey-tomcat", "md5sum"=>"703cf5fe6b60003e6e494b3bddd5e315"}
+{"os"=>"debian-6", "headline"=>"TurnKey Lighttpd PHP FastCGI Server", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/lighttpd-php-fastcgi", "descri
+ption"=>"TurnKey Lighttpd PHP FastCGI Server - Includes PHPMyAdmin and MySQL", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://
+releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-lighttpd-php-fastcgi_
+12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-lighttpd-php-fastcgi_12.0-1_i386.tar.gz", "package"=>"turnkey-lighttpd-php-fastcgi", "md5sum"=>"2941f2416439e64
+de03f835c38143aed"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Torrent Server", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/torrentserver", "description"=>"TurnKey
+ Torrent Server - File download and sharing server", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/
+pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-torrentserver_11.3-1_i386.tar.gz", "templat
+e"=>"ubuntu-10.04-turnkey-torrentserver_11.3-1_i386.tar.gz", "package"=>"turnkey-torrentserver", "md5sum"=>"000085c5e284a4e1b8335a010f99975e"}
+{"os"=>"debian-6", "headline"=>"TurnKey MoinMoin", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/moinmoin", "description"=>"TurnKey MoinMoin - Wik
+i Engine", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http:
+//downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-moinmoin_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-moinmoin_12.0-1_i386.tar.gz",
+ "package"=>"turnkey-moinmoin", "md5sum"=>"c230bbdb76ca06746d0458d6cb321c90"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Revision Control", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/revision-control", "description"=>"Tu
+rnKey Revision Control - All-in-one code repository", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org
+/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-revision-control_11.3-1_i386.tar.gz", "tem
+plate"=>"ubuntu-10.04-turnkey-revision-control_11.3-1_i386.tar.gz", "package"=>"turnkey-revision-control", "md5sum"=>"59fec4e44ea1b27814012b2239dac3b8"}
+{"os"=>"debian-6", "headline"=>"TurnKey OrangeHRM", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/orangehrm", "description"=>"TurnKey OrangeHRM - 
+Human Resources Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", 
+"location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-orangehrm_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-orangehrm_
+12.0-1_i386.tar.gz", "package"=>"turnkey-orangehrm", "md5sum"=>"ed3b678171b53091854c8589823ec3ae"}
+{"os"=>"centos-5", "headline"=>"CentOS 5 (standard)", "version"=>"5.6-1", "infopage"=>"http://pve.proxmox.com/wiki/CentOS_5_Standard", "description"=>"A small Cen
+tOS system.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/syste
+m/centos-5-standard_5.6-1_i386.tar.gz", "template"=>"centos-5-standard_5.6-1_i386.tar.gz", "package"=>"centos-5-standard", "md5sum"=>"47477bd6bf5fc172ee9b767358ae
+f246"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey PostgreSQL", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/postgresql", "description"=>"TurnKey Postgr
+eSQL - Object-relational Database System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "typ
+e"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-postgresql_11.3-1_i386.tar.gz", "template"=>"ubuntu-1
+0.04-turnkey-postgresql_11.3-1_i386.tar.gz", "package"=>"turnkey-postgresql", "md5sum"=>"7f09d5bb532d66a3d006a243db2cacd9"}
+{"os"=>"debian-4.0", "headline"=>"Debian 4.0 (standard)", "version"=>"4.0-5", "infopage"=>"http://pve.proxmox.com/wiki/Debian_4.0_Standard", "description"=>"A sma
+ll Debian Etch system including all standard packages.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"h
+ttp://download.proxmox.com/appliances/system/debian-4.0-standard_4.0-5_i386.tar.gz", "template"=>"debian-4.0-standard_4.0-5_i386.tar.gz", "maintainer"=>"Proxmox S
+upport Team <support@proxmox.com>", "package"=>"debian-4.0-standard", "md5sum"=>"57d47231719f2117514dffbeb736440e"}
+{"os"=>"debian-6", "headline"=>"TurnKey Node.js", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/nodejs", "description"=>"TurnKey Node.js - JavaScr
+ipt Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"
+http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-nodejs_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-nodejs_12.0-1_i386.tar.gz"
+, "package"=>"turnkey-nodejs", "md5sum"=>"b63f6c299926ab0bcaa8dd14b25a529a"}
+{"os"=>"debian-6", "headline"=>"TurnKey ASP .Net on Apache", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/asp-net-apache", "description"=>"TurnKe
+y ASP .Net on Apache - ASP .NET on Apache with Mod mono", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux
+.org/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-asp-net-apache_12.0-1_i386.tar.gz", "templ
+ate"=>"debian-6-turnkey-asp-net-apache_12.0-1_i386.tar.gz", "package"=>"turnkey-asp-net-apache", "md5sum"=>"abdc49e55a42da81a22650e0d95e9647"}
+{"os"=>"debian-6.0", "headline"=>"Drupal Content Management", "version"=>"6.20-1", "infopage"=>"http://pve.proxmox.com/wiki/Drupal", "description"=>"Drupal is a f
+ree software package that allows an individual or a community of users to easily publish, manage and organize a wide variety of content on a website. Tens of thou
+sands of people and organizations are using Drupal to power scores of different web sites, including community web portals, discussion sites, corporate web sites,
+ intranet applications, personal web sites or blogs, ...", "manageurl"=>"http://__IPADDRESS__/", "section"=>"www", "source"=>"http://download.proxmox.com/applianc
+es", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/www/debian-6.0-drupal_6.20-1_i386.tar.gz", "template"=>"debian-6.0-drupal_6.20-1_i386.t
+ar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "package"=>"drupal", "md5sum"=>"fc3169a19b01001a13ee96143f91a4e2"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey SDK for Amazon EC2", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/ec2sdk", "description"=>"TurnKey SD
+K for Amazon EC2 - Development tools for Amazon's cloud", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux
+.org/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-ec2sdk_11.3-1_i386.tar.gz", "template"
+=>"ubuntu-10.04-turnkey-ec2sdk_11.3-1_i386.tar.gz", "package"=>"turnkey-ec2sdk", "md5sum"=>"fe4ec7ccf5a16ecbddfa48b64fd7ac36"}
+{"os"=>"debian-6", "headline"=>"TurnKey ProjectPier", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/projectpier", "description"=>"TurnKey ProjectP
+ier - Easy Online Collaboration", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"open
+vz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-projectpier_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-pro
+jectpier_12.0-1_i386.tar.gz", "package"=>"turnkey-projectpier", "md5sum"=>"75fc48201524e5e5ee56c718922afbca"}
+{"os"=>"debian-6", "headline"=>"TurnKey Moodle", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/moodle", "description"=>"TurnKey Moodle - Course Ma
+nagement System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=
+>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-moodle_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-moodle_12.0-1_i386.tar.g
+z", "package"=>"turnkey-moodle", "md5sum"=>"1b24a12b4ebfb630beab7e0d83addace"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Tracks", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/tracks", "description"=>"TurnKey Tracks - Getti
+ng Things Done (GTD) Application", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"ope
+nvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-tracks_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey
+-tracks_11.3-1_i386.tar.gz", "package"=>"turnkey-tracks", "md5sum"=>"b72ea45a252807d5428a63d0e54bdd5b"}
+{"os"=>"debian-6", "headline"=>"TurnKey App Engine Java", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/appengine-java", "description"=>"TurnKey A
+pp Engine Java - Google App Engine SDK (Java)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve",
+ "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-appengine-java_12.0-1_i386.tar.gz", "template"=>"deb
+ian-6-turnkey-appengine-java_12.0-1_i386.tar.gz", "package"=>"turnkey-appengine-java", "md5sum"=>"b8d7ad99040568b1e8897e3febb14f75"}
+{"os"=>"debian-6", "headline"=>"TurnKey Omeka", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/omeka", "description"=>"TurnKey Omeka - CMS and Coll
+ections Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locatio
+n"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-omeka_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-omeka_12.0-1_i386.tar.
+gz", "package"=>"turnkey-omeka", "md5sum"=>"3d895dc4d36422076d3eac556db43ed3"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Symfony", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/symfony", "description"=>"TurnKey Symfony - PH
+P Web Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=
+>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-symfony_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-symfony_11.3-1_
+i386.tar.gz", "package"=>"turnkey-symfony", "md5sum"=>"4599c71d24d50d770fe69826068a0a61"}
+{"os"=>"debian-6", "headline"=>"TurnKey b2evolution", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/b2evolution", "description"=>"TurnKey b2evolut
+ion - Content Management system", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"open
+vz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-b2evolution_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-b2e
+volution_12.0-1_i386.tar.gz", "package"=>"turnkey-b2evolution", "md5sum"=>"5b2d5daaab075f420d54a6614f7053c7"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Roundup", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/roundup", "description"=>"TurnKey Roundup - Is
+sue Tracking System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-roundup_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-roundup_11.
+3-1_i386.tar.gz", "package"=>"turnkey-roundup", "md5sum"=>"b280e1b703888d18fd0e29ad1cf4257d"}
+{"os"=>"debian-6", "headline"=>"TurnKey Django", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/django", "description"=>"TurnKey Django - High-leve
+l Python Web Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "loc
+ation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-django_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-django_12.0-1_i38
+6.tar.gz", "package"=>"turnkey-django", "md5sum"=>"0956f0d1f659eade36d0285dd965fe60"}
+{"os"=>"debian-6", "headline"=>"TurnKey LAMP Stack", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/lamp", "description"=>"TurnKey LAMP Stack - Web
+ Stack (MySQL)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>
+"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-lamp_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-lamp_12.0-1_i386.tar.gz", "
+package"=>"turnkey-lamp", "md5sum"=>"7755bbf70bb323527875c06c9bce804f"}
+{"os"=>"debian-6", "headline"=>"TurnKey Tracks", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/tracks", "description"=>"TurnKey Tracks - Getting T
+hings Done (GTD) Application", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz"
+, "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-tracks_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-tracks_12.0
+-1_i386.tar.gz", "package"=>"turnkey-tracks", "md5sum"=>"1faedff74aa11c9f990814b0006a3c8e"}
+{"os"=>"centos-4", "headline"=>"CentOS 4 (standard)", "version"=>"4.9-1", "infopage"=>"http://pve.proxmox.com/wiki/CentOS_4_Standard", "description"=>"A small Cen
+tOS system.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/syste
+m/centos-4-standard_4.9-1_i386.tar.gz", "template"=>"centos-4-standard_4.9-1_i386.tar.gz", "package"=>"centos-4-standard", "md5sum"=>"ffd2c88eea7667c185315eadab30
+6362"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey ProjectPier", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/projectpier", "description"=>"TurnKey Proj
+ectPier - Easy Online Collaboration", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"
+openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-projectpier_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04
+-turnkey-projectpier_11.3-1_i386.tar.gz", "package"=>"turnkey-projectpier", "md5sum"=>"42d7ae4936d7dd6dcb58e1a516b484a1"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Moodle", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/moodle", "description"=>"TurnKey Moodle - Cours
+e Management System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-moodle_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-moodle_11.3-
+1_i386.tar.gz", "package"=>"turnkey-moodle", "md5sum"=>"18fd743098072d82b59194e19d77073a"}
+{"os"=>"debian-6", "headline"=>"TurnKey Core", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/core", "description"=>"TurnKey Core - Common Base for
+ All Appliances", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=
+>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-core_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-core_12.0-1_i386.tar.gz", 
+"package"=>"turnkey-core", "md5sum"=>"82a3a08677112bc35aa824f78f923432"}
+{"os"=>"fedora-14", "headline"=>"Fedora 14 (standard)", "version"=>"14-1", "infopage"=>"http://pve.proxmox.com/wiki/Fedora_14_Standard", "description"=>"A small F
+edora system.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/sys
+tem/fedora-14-standard_14-1_i386.tar.gz", "template"=>"fedora-14-standard_14-1_i386.tar.gz", "package"=>"fedora-14-standard", "md5sum"=>"8f863b1645878ecbad660e7fc
+169160b"}
+{"os"=>"debian-6", "headline"=>"TurnKey CouchDB", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/couchdb", "description"=>"TurnKey CouchDB - JSON b
+ased DB", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http:/
+/downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-couchdb_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-couchdb_12.0-1_i386.tar.gz", "p
+ackage"=>"turnkey-couchdb", "md5sum"=>"4ba874ca81fd6f9f12e088bfdbfb2884"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey phpBB", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/phpbb", "description"=>"TurnKey phpBB - Communit
+y Forum Solution", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"
+=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-phpbb_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-phpbb_11.3-1_i38
+6.tar.gz", "package"=>"turnkey-phpbb", "md5sum"=>"e0492ab71f3e680462532ce9edf70b42"}
+{"os"=>"debian-6", "headline"=>"TurnKey vTiger CRM", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/vtiger", "description"=>"TurnKey vTiger CRM - C
+ustomer Relationship Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"open
+vz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-vtiger_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-vtiger_1
+2.0-1_i386.tar.gz", "package"=>"turnkey-vtiger", "md5sum"=>"573ab4109d8c61e311412eabc6ba6b73"}
+{"os"=>"debian-6", "headline"=>"TurnKey OTRS", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/otrs", "description"=>"TurnKey OTRS - Ticket Request 
+System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http://
+downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-otrs_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-otrs_12.0-1_i386.tar.gz", "package"
+=>"turnkey-otrs", "md5sum"=>"2c8fad7e30b914e397f085938f986124"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Magento", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/magento", "description"=>"TurnKey Magento - Fl
+exible eCommerce Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "
+location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-magento_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-magen
+to_11.3-1_i386.tar.gz", "package"=>"turnkey-magento", "md5sum"=>"a620538082c214e4bb2e689a16b7f23f"}
+{"os"=>"debian-6", "headline"=>"TurnKey Web2Py", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/web2py", "description"=>"TurnKey Web2Py - Python Fr
+amework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http:/
+/downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-web2py_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-web2py_12.0-1_i386.tar.gz", "pac
+kage"=>"turnkey-web2py", "md5sum"=>"5e2c03fdb5294e4fd342ee684258aa55"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey File Server", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/fileserver", "description"=>"TurnKey File 
+Server - Simple Network Attached Storage", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "typ
+e"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-fileserver_11.3-1_i386.tar.gz", "template"=>"ubuntu-1
+0.04-turnkey-fileserver_11.3-1_i386.tar.gz", "package"=>"turnkey-fileserver", "md5sum"=>"ccddda24370a2cad026244ca8a6e4f93"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Trac", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/trac", "description"=>"TurnKey Trac - Integrated 
+SCM & Project Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-trac_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-trac_11.3
+-1_i386.tar.gz", "package"=>"turnkey-trac", "md5sum"=>"b94e35e527ad0280f1c2ae7261969129"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey MoinMoin", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/moinmoin", "description"=>"TurnKey MoinMoin -
+ Wiki Engine", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"h
+ttp://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-moinmoin_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-moinmoin_11.3-1_i
+386.tar.gz", "package"=>"turnkey-moinmoin", "md5sum"=>"be5c68b39ea388ab8d672264d4822d78"}
+{"os"=>"debian-4.0", "headline"=>"Proxmox Mail Gateway", "version"=>"2.6-2", "infopage"=>"http://pve.proxmox.com/wiki/Proxmox_Mail_Gateway", "description"=>"A ful
+l featured mail proxy for spam an virus filtering.", "manageurl"=>"https://__IPADDRESS__/", "section"=>"mail", "source"=>"http://download.proxmox.com/appliances",
+ "type"=>"openvz", "certified"=>"yes", "location"=>"http://download.proxmox.com/appliances/mail/debian-4.0-proxmox-mailgateway_2.6-2_i386.tar.gz", "template"=>"de
+bian-4.0-proxmox-mailgateway_2.6-2_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "package"=>"proxmox-mailgateway", "md5sum"=>"862bbcf0
+983177aa7c6534ea0729ed27"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Gallery", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/gallery", "description"=>"TurnKey Gallery - Ph
+oto Album Organizer", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-gallery_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-gallery_11.
+3-1_i386.tar.gz", "package"=>"turnkey-gallery", "md5sum"=>"eb1623d75bbebd4dee982dadd692d495"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Standalone Tomcat", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/tomcat", "description"=>"TurnKey Sta
+ndalone Tomcat - Java Servlet and JSP Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve"
+, "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-tomcat_11.3-1_i386.tar.gz", "template"=>"ubuntu
+-10.04-turnkey-tomcat_11.3-1_i386.tar.gz", "package"=>"turnkey-tomcat", "md5sum"=>"ef7941ab96b51f39c7844ec1938916a4"}
+{"os"=>"debian-6", "headline"=>"TurnKey SugarCRM", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/sugarcrm", "description"=>"TurnKey SugarCRM - Bus
+iness & Social CRM Software", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz",
+ "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-sugarcrm_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-sugarcrm_1
+2.0-1_i386.tar.gz", "package"=>"turnkey-sugarcrm", "md5sum"=>"2bbdb7a8957034aa55b4700d3d5d7075"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Deki", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/deki", "description"=>"TurnKey Deki - MindTouch C
+ore Enterprise Wiki", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-deki_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-deki_11.3-1_i3
+86.tar.gz", "package"=>"turnkey-deki", "md5sum"=>"e5b8c26cf86bce6bb1718dceae078bac"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey WordPress", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/wordpress", "description"=>"TurnKey WordPres
+s - Blog Publishing Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz"
+, "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-wordpress_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-
+wordpress_11.3-1_i386.tar.gz", "package"=>"turnkey-wordpress", "md5sum"=>"d16356557ddbf151b5ac1d5d789c0756"}
+{"os"=>"debian-6", "headline"=>"TurnKey Zurmo CRM", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/zurmo", "description"=>"TurnKey Zurmo CRM - CRM 
+System (Gamified, Social, Mobile)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"op
+envz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-zurmo_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-zurmo_1
+2.0-1_i386.tar.gz", "package"=>"turnkey-zurmo", "md5sum"=>"da7c71d4f264da334d970d23f91d4d50"}
+{"os"=>"debian-6", "headline"=>"TurnKey Elgg", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/elgg", "description"=>"TurnKey Elgg - Social Networki
+ng Engine", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http
+://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-elgg_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-elgg_12.0-1_i386.tar.gz", "packa
+ge"=>"turnkey-elgg", "md5sum"=>"3359d7ee6c7b297922448c63429b179b"}
+{"os"=>"debian-6", "headline"=>"TurnKey SimpleMachines", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/simplemachines", "description"=>"TurnKey Si
+mpleMachines - Forum System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz",
+ "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-simplemachines_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-simp
+lemachines_12.0-1_i386.tar.gz", "package"=>"turnkey-simplemachines", "md5sum"=>"6dcbe7199bbbd225f9b4d1b68c6f6d2a"}
+{"os"=>"debian-6", "headline"=>"TurnKey siTracker", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/sitracker", "description"=>"TurnKey siTracker - 
+Support Incident Tracker", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-sitracker_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-sitracker_12
+.0-1_i386.tar.gz", "package"=>"turnkey-sitracker", "md5sum"=>"62a809716778a6f899ae7332bfc74edd"}
+{"os"=>"debian-5.0", "headline"=>"Acquia Drupal Content Management", "version"=>"1.2.21-1", "infopage"=>"http://pve.proxmox.com/wiki/Acquia_Drupal", "description"
+=>"Acquia Drupal is a commercially supported distribution of the open source Drupal social publishing system. A packaged collection of some of the best software f
+rom the Drupal community, Acquia Drupal offers you an advanced starting point to quickly begin building Drupal websites.", "manageurl"=>"http://__IPADDRESS__/", "
+section"=>"www", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/www/debian-5.0-acquia_1
+.2.21-1_i386.tar.gz", "template"=>"debian-5.0-acquia_1.2.21-1_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "package"=>"acquia", "md5s
+um"=>"495c16fae7a3ebaff24cdad6538ca0c9"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Django", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/django", "description"=>"TurnKey Django - High-
+level Python Web Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", 
+"location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-django_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-djang
+o_11.3-1_i386.tar.gz", "package"=>"turnkey-django", "md5sum"=>"8ebd044260871c9043589fecaece7fd9"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Mantis", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/mantis", "description"=>"TurnKey Mantis - Bug T
+racking System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>
+"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-mantis_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-mantis_11.3-1_i38
+6.tar.gz", "package"=>"turnkey-mantis", "md5sum"=>"b49072213abcf305afe9b1ce937baf82"}
+{"os"=>"debian-6", "headline"=>"TurnKey Movable Type", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/movabletype", "description"=>"TurnKey Movable
+ Type - Professional Publishing Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "typ
+e"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-movabletype_12.0-1_i386.tar.gz", "template"=>"debian-6-tu
+rnkey-movabletype_12.0-1_i386.tar.gz", "package"=>"turnkey-movabletype", "md5sum"=>"ae7050a2434953ca3d023dc12479a530"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Drupal 6", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/drupal6", "description"=>"TurnKey Drupal 6 - 
+Content Management Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz"
+, "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-drupal6_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-dr
+upal6_11.3-1_i386.tar.gz", "package"=>"turnkey-drupal6", "md5sum"=>"3f68dd4ebf445143a01f565533d76b34"}
+{"os"=>"debian-6", "headline"=>"TurnKey Deki", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/deki", "description"=>"TurnKey Deki - MindTouch Core 
+Enterprise Wiki", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=
+>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-deki_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-deki_12.0-1_i386.tar.gz", 
+"package"=>"turnkey-deki", "md5sum"=>"6597e0618081245d064c0b9737b45a88"}
+{"os"=>"debian-6", "headline"=>"TurnKey Mambo", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/mambo", "description"=>"TurnKey Mambo - Content Mana
+gement System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"
+http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-mambo_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-mambo_12.0-1_i386.tar.gz", 
+"package"=>"turnkey-mambo", "md5sum"=>"ae3ce9288726185d6694024a8eab1ccd"}
+{"os"=>"ubuntu-8.04", "headline"=>"CYAN Secure Web", "version"=>"1.8.4-1", "infopage"=>"http://pve.proxmox.com/wiki/CYAN_Secure_Web", "description"=>"CYAN Secure 
+Web is a high performance proxy server, which is designed to provide adaptive security and to meet scalable web filtering needs. The powerful all-in-one solution 
+protects your company from the already existing, as well as from the continually emerging web-based threats and inappropriate web usage.", "manageurl"=>"https://_
+_IPADDRESS__:9992/", "section"=>"www", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "certified"=>"yes", "location"=>"http://download.prox
+mox.com/appliances/www/ubuntu-8.04-cyan-sweb_1.8.4-1_i386.tar.gz", "template"=>"ubuntu-8.04-cyan-sweb_1.8.4-1_i386.tar.gz", "maintainer"=>"Proxmox Support Team <s
+upport@proxmox.com>", "package"=>"cyan-sweb", "md5sum"=>"319772263d3ba4942330f13375daf070"}
+{"os"=>"debian-6", "headline"=>"TurnKey OpenLDAP", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/openldap", "description"=>"TurnKey OpenLDAP - Ope
+n Source LDAP", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"
+http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-openldap_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-openldap_12.0-1_i386.tar
+.gz", "package"=>"turnkey-openldap", "md5sum"=>"7c613affa7b0e9ac2265b7431629c082"}
+{"os"=>"debian-6", "headline"=>"TurnKey Canvas LMS", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/canvas", "description"=>"TurnKey Canvas LMS - L
+earning Management System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "
+location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-canvas_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-canvas_12.0-1_
+i386.tar.gz", "package"=>"turnkey-canvas", "md5sum"=>"f0761711bccd68979cb89d2bad769fd2"}
+{"os"=>"ubuntu-8.04", "headline"=>"Zenoss Core IT monitoring", "version"=>"2.5.1-1", "infopage"=>"http://pve.proxmox.com/wiki/Zenoss", "description"=>"Zenoss Core
+ is an award-winning open source IT monitoring product that delivers the functionality to effectively manage the configuration, health and performance of networks
+, servers and applications through a single, integrated software package.", "manageurl"=>"http://__IPADDRESS__:8080/", "section"=>"admin", "source"=>"http://downl
+oad.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/admin/ubuntu-8.04-zenoss_2.5.1-1_i386.tar.gz", "template"=>"ubu
+ntu-8.04-zenoss_2.5.1-1_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "package"=>"zenoss", "md5sum"=>"025957c3e99267623c168331a57fee8f
+"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey StatusNet", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/statusnet", "description"=>"TurnKey StatusNe
+t - Open, distributed microblogging", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"
+openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-statusnet_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-t
+urnkey-statusnet_11.3-1_i386.tar.gz", "package"=>"turnkey-statusnet", "md5sum"=>"8eb6c9a73bb2d2c71da38421b1aa8b1e"}
+{"os"=>"debian-6", "headline"=>"TurnKey TWiki", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/twiki", "description"=>"TurnKey TWiki - Enterprise W
+iki Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"h
+ttp://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-twiki_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-twiki_12.0-1_i386.tar.gz", "
+package"=>"turnkey-twiki", "md5sum"=>"3d579cc40c0b52f7fa169c5de0bd6ffa"}
+{"os"=>"debian-6.0", "headline"=>"MediaWiki", "version"=>"1.15-5", "infopage"=>"http://pve.proxmox.com/wiki/MediaWiki", "description"=>"MediaWiki is a wiki engine
+ (a program for creating a collaboratively edited website). It is designed to handle heavy websites containing library-like document collections, and supports use
+r uploads of images/sounds, multilingual content, TOC autogeneration, ISBN links, etc.", "manageurl"=>"http://__IPADDRESS__/", "section"=>"www", "source"=>"http:/
+/download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/www/debian-6.0-mediawiki_1.15-5_i386.tar.gz", "template"=
+>"debian-6.0-mediawiki_1.15-5_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "package"=>"mediawiki", "md5sum"=>"a899dc82312d33fd07a6408
+ee193a9a9"}
+{"os"=>"debian-6", "headline"=>"TurnKey OSQA", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/osqa", "description"=>"TurnKey OSQA - QA System", "ma
+nageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http://downloads.so
+urceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-osqa_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-osqa_12.0-1_i386.tar.gz", "package"=>"turnkey-o
+sqa", "md5sum"=>"a15389c874099600d6f91925d2f0def7"}
+{"os"=>"ubuntu-10.04", "headline"=>"Ubuntu Lucid (standard)", "version"=>"10.04-4", "infopage"=>"http://pve.proxmox.com/wiki/Ubuntu_Lucid_Standard", "description"
+=>"A small Ubuntu Lucid system including all standard packages.", "section"=>"system", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "loca
+tion"=>"http://download.proxmox.com/appliances/system/ubuntu-10.04-standard_10.04-4_i386.tar.gz", "template"=>"ubuntu-10.04-standard_10.04-4_i386.tar.gz", "packag
+e"=>"ubuntu-10.04-standard", "md5sum"=>"ed04c27ede0327d39b88e43bf9b0d10e"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Domain Controller", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/domain-controller", "description"=>"
+TurnKey Domain Controller - Drop-in PDC replacement", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org
+/pve", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-domain-controller_11.3-1_i386.tar.gz", "te
+mplate"=>"ubuntu-10.04-turnkey-domain-controller_11.3-1_i386.tar.gz", "package"=>"turnkey-domain-controller", "md5sum"=>"a98618e5d4b12ee648c1ee93e4b36653"}
+{"os"=>"debian-6", "headline"=>"TurnKey CodeIgniter", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/codeigniter", "description"=>"TurnKey CodeIgni
+ter - PHP Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-codeigniter_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-codeigniter_12.
+0-1_i386.tar.gz", "package"=>"turnkey-codeigniter", "md5sum"=>"1395b909b9ad52615667cdd191b87a83"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Joomla 1.6", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/joomla16", "description"=>"TurnKey Joomla 1
+.6 - Cutting Edge Content Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>
+"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-joomla16_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-t
+urnkey-joomla16_11.3-1_i386.tar.gz", "package"=>"turnkey-joomla16", "md5sum"=>"ce1f405fde09c1a645d300d5efa3f750"}
+{"os"=>"debian-6", "headline"=>"TurnKey ejabberd", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/ejabberd", "description"=>"TurnKey ejabberd - XMP
+P and Web Chat", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>
+"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-ejabberd_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-ejabberd_12.0-1_i386.ta
+r.gz", "package"=>"turnkey-ejabberd", "md5sum"=>"4ee05849480824a6433d91c7799e7083"}
+{"os"=>"debian-6", "headline"=>"TurnKey Yii Framework", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/yiiframework", "description"=>"TurnKey Yii F
+ramework - PHP Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-yiiframework_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-yiiframew
+ork_12.0-1_i386.tar.gz", "package"=>"turnkey-yiiframework", "md5sum"=>"d4944c71f0a0d7280653126ba1a4768c"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Core", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/core", "description"=>"TurnKey Core - Common Base
+ for All Appliances", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-core_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-core_11.3-1_i3
+86.tar.gz", "package"=>"turnkey-core", "md5sum"=>"fb66412e23f2b1ccc69fab3d267732d4"}
+{"os"=>"debian-6", "headline"=>"TurnKey Phreedom ERP", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/phreedom", "description"=>"TurnKey Phreedom E
+RP - Enterprise Resource Planning", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"op
+envz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-phreedom_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-phre
+edom_12.0-1_i386.tar.gz", "package"=>"turnkey-phreedom", "md5sum"=>"0981603cfc511acf467014d2ee9d10af"}
+{"os"=>"debian-6", "headline"=>"TurnKey PrestaShop", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/prestashop", "description"=>"TurnKey PrestaShop
+ - Easy to use online shop", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", 
+"location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-prestashop_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-prestasho
+p_12.0-1_i386.tar.gz", "package"=>"turnkey-prestashop", "md5sum"=>"4704b80e1ff2fe895f498358bb60cd30"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey MediaWiki", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/mediawiki", "description"=>"TurnKey MediaWik
+i - Wikipedia's Wiki Engine", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz",
+ "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-mediawiki_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-m
+ediawiki_11.3-1_i386.tar.gz", "package"=>"turnkey-mediawiki", "md5sum"=>"d74f7598ce85917169d5969366efa210"}
+{"os"=>"debian-6.0", "headline"=>"Wordpress", "version"=>"3.1.2-1", "infopage"=>"http://pve.proxmox.com/wiki/Wordpress", "description"=>"WordPress is a state-of-t
+he-art publishing platform with a focus on aesthetics, web standards, and usability. WordPress is both free and priceless at the same time.", "manageurl"=>"http:/
+/__IPADDRESS__/", "section"=>"www", "source"=>"http://download.proxmox.com/appliances", "type"=>"openvz", "location"=>"http://download.proxmox.com/appliances/www/
+debian-6.0-wordpress_3.1.2-1_i386.tar.gz", "template"=>"debian-6.0-wordpress_3.1.2-1_i386.tar.gz", "maintainer"=>"Proxmox Support Team <support@proxmox.com>", "pa
+ckage"=>"wordpress", "md5sum"=>"b5483e583f7110a9e46aa94389be8792"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey OTRS", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/otrs", "description"=>"TurnKey OTRS - Ticket Requ
+est System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"htt
+p://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-otrs_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-otrs_11.3-1_i386.tar.gz
+", "package"=>"turnkey-otrs", "md5sum"=>"a28d9bf166533d29eace783fead64560"}
+{"os"=>"debian-6", "headline"=>"TurnKey LAPP Stack", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/lapp", "description"=>"TurnKey LAPP Stack - Web
+ Stack (PostgreSQL)", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-lapp_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-lapp_12.0-1_i386.tar.g
+z", "package"=>"turnkey-lapp", "md5sum"=>"8267780406005391ab8e58efdf6103aa"}
+{"os"=>"debian-6", "headline"=>"TurnKey Torrent Server", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/torrentserver", "description"=>"TurnKey Tor
+rent Server - File Download and Sharing Server", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve"
+, "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-torrentserver_12.0-1_i386.tar.gz", "template"=>"deb
+ian-6-turnkey-torrentserver_12.0-1_i386.tar.gz", "package"=>"turnkey-torrentserver", "md5sum"=>"124e3643d62ccfe456c4a635ceaf0b0a"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey MySQL", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/mysql", "description"=>"TurnKey MySQL - Relation
+al Database Management System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz
+", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-mysql_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-mys
+ql_11.3-1_i386.tar.gz", "package"=>"turnkey-mysql", "md5sum"=>"f7d9f31a3c62bccf22b942f92002e4ea"}
+{"os"=>"debian-6", "headline"=>"TurnKey Bugzilla", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/bugzilla", "description"=>"TurnKey Bugzilla - Bug
+ Tracking System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"
+=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-bugzilla_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-bugzilla_12.0-1_i386.
+tar.gz", "package"=>"turnkey-bugzilla", "md5sum"=>"b5ce84b95f5c9de17e9524aa802ed6ae"}
+{"os"=>"debian-6", "headline"=>"TurnKey OSCommerce", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/oscommerce", "description"=>"TurnKey OSCommerce
+ - eCommerce Online Shop", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-oscommerce_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-oscommerce_
+12.0-1_i386.tar.gz", "package"=>"turnkey-oscommerce", "md5sum"=>"5fb94f163e2427f1eef2883fdea4202f"}
+{"os"=>"debian-6", "headline"=>"TurnKey ZenCart", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/zencart", "description"=>"TurnKey ZenCart - E-Comm
+erce Platform", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"
+http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-zencart_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-zencart_12.0-1_i386.tar.g
+z", "package"=>"turnkey-zencart", "md5sum"=>"090b5551e0be66f7b65c9bc97b23baf0"}
+{"os"=>"debian-6", "headline"=>"TurnKey Domain Controller", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/domain-controller", "description"=>"Turn
+Key Domain Controller - Drop-in PDC replacement", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve
+", "type"=>"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-domain-controller_12.0-1_i386.tar.gz", "template"=
+>"debian-6-turnkey-domain-controller_12.0-1_i386.tar.gz", "package"=>"turnkey-domain-controller", "md5sum"=>"ce3c9f250949986904419d2732fb104d"}
+{"os"=>"debian-6", "headline"=>"TurnKey PHPNuke", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/phpnuke", "description"=>"TurnKey PHPNuke - Conten
+t Management System", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "locati
+on"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-phpnuke_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-phpnuke_12.0-1_i386
+.tar.gz", "package"=>"turnkey-phpnuke", "md5sum"=>"88bdd3009389d727b92a789a251f736b"}
+{"os"=>"debian-6", "headline"=>"TurnKey StatusNet", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/statusnet", "description"=>"TurnKey StatusNet - 
+Open, Distributed Microblogging", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"open
+vz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-statusnet_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-statu
+snet_12.0-1_i386.tar.gz", "package"=>"turnkey-statusnet", "md5sum"=>"99fca5ee2239ab1c7886e70cf5e3be89"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey App Engine", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/appengine", "description"=>"TurnKey App Eng
+ine - Google App Engine SDK", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz",
+ "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-turnkey-a
+ppengine_11.3-1_i386.tar.gz", "package"=>"turnkey-appengine", "md5sum"=>"51838bdf15a8e52288a474bf85592896"}
+{"os"=>"debian-6", "headline"=>"TurnKey Drupal 7", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/drupal7", "description"=>"TurnKey Drupal 7 - Cont
+ent Management Framework", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "l
+ocation"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-drupal7_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-drupal7_12.0-1
+_i386.tar.gz", "package"=>"turnkey-drupal7", "md5sum"=>"2da8369566eacc62c079269c76fb3e44"}
+{"os"=>"debian-6", "headline"=>"TurnKey PunBB", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/punbb", "description"=>"TurnKey PunBB - Forum Softwa
+re", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "location"=>"http://down
+loads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-punbb_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-punbb_12.0-1_i386.tar.gz", "package"=>
+"turnkey-punbb", "md5sum"=>"2074de094a0d2cbd518edcebc8614e8f"}
+{"os"=>"debian-6", "headline"=>"TurnKey Sencha", "version"=>"12.0-1", "infopage"=>"http://www.turnkeylinux.org/sencha", "description"=>"TurnKey Sencha - Framework
+ for Mobile HTML5 webapps", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>"openvz", "
+location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/debian-6-turnkey-sencha_12.0-1_i386.tar.gz", "template"=>"debian-6-turnkey-sencha_12.0-1_
+i386.tar.gz", "package"=>"turnkey-sencha", "md5sum"=>"04a3e0d55dd7d92ee662445a9f6c66b1"}
+{"os"=>"ubuntu-10.04", "headline"=>"TurnKey Joomla 1.5", "version"=>"11.3-1", "infopage"=>"http://www.turnkeylinux.org/joomla15", "description"=>"TurnKey Joomla 1
+.5 - Cutting Edge Content Management", "manageurl"=>"http://__IPADDRESS__/", "section"=>"turnkeylinux", "source"=>"http://releases.turnkeylinux.org/pve", "type"=>
+"openvz", "location"=>"http://downloads.sourceforge.net/project/turnkeylinux/openvz/ubuntu-10.04-turnkey-joomla15_11.3-1_i386.tar.gz", "template"=>"ubuntu-10.04-t
+urnkey-joomla15_11.3-1_i386.tar.gz", "package"=>"turnkey-joomla15", "md5sum"=>"02ef4fb9e480e98bcec4b7c19751c364"}

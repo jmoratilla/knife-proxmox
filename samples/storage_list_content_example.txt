@@ -1,0 +1,84 @@
+{
+    "data": [
+        {
+            "format": "raw",
+            "content": "images",
+            "used": 0,
+            "vmid": "101",
+            "volid": "local:101/vm-101-disk-1.raw",
+            "size": 34359738368
+        },
+        {
+            "format": "raw",
+            "content": "images",
+            "used": 0,
+            "vmid": "101",
+            "volid": "local:101/vm-101-disk-2.raw",
+            "size": 34359738368
+        },
+        {
+            "format": "raw",
+            "content": "images",
+            "used": 1610612736,
+            "vmid": "101",
+            "volid": "local:101/vm-101-disk-3.raw",
+            "size": 34359738368
+        },
+        {
+            "format": "raw",
+            "content": "images",
+            "used": 1395864371,
+            "vmid": "102",
+            "volid": "local:102/vm-102-disk-1.raw",
+            "size": 17179869184
+        },
+        {
+            "format": "tgz",
+            "content": "vztmpl",
+            "volid": "local:vztmpl/debian-6.0-request-tracker_3.8.8-2_i386.tar.gz",
+            "size": 179693489
+        },
+        {
+            "format": "tgz",
+            "content": "vztmpl",
+            "volid": "local:vztmpl/old_ubuntu-11.10-x86_64.tar.gz",
+            "size": 130625399
+        },
+        {
+            "format": "tgz",
+            "content": "vztmpl",
+            "volid": "local:vztmpl/ubuntu-10.04-standard_10.04-4_i386.tar.gz",
+            "size": 142126884
+        },
+        {
+            "format": "tgz",
+            "content": "vztmpl",
+            "volid": "local:vztmpl/ubuntu-11.10-x86_64-jorge1-.tar.gz",
+            "size": 130625551
+        },
+        {
+            "format": "tgz",
+            "content": "vztmpl",
+            "volid": "local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz",
+            "size": 161655654
+        },
+        {
+            "format": "iso",
+            "content": "iso",
+            "volid": "local:iso/illumian1.0.iso",
+            "size": 550035456
+        },
+        {
+            "format": "iso",
+            "content": "iso",
+            "volid": "local:iso/oi-dev-151a-text-x86.iso",
+            "size": 514420736
+        },
+        {
+            "format": "iso",
+            "content": "iso",
+            "volid": "local:iso/ubuntu-11.10-server-i386.iso",
+            "size": 712290304
+        }
+    ]
+}
