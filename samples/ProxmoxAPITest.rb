@@ -18,7 +18,7 @@ realm    = ENV['PVE_REALM'] || 'pve'
 password = ENV['PVE_USER_PASSWORD'] || 'test123'
 url_base = ENV['PVE_CLUSTER_URL'] || 'https://localhost:8006/'
 nodename = ENV['PVE_NODE_NAME'] || 'localhost'
-
+storagename = ENV['PVE_STORAGE_NAME'] || 'local'
 url_base += 'api2/json/'
 
 csrf_prevention_token = nil
@@ -33,6 +33,7 @@ SERVER INFO:
   PVE_NODE_NAME    => #{nodename}
   PVE_USER_NAME    => #{username}
   PVE_REALM        => #{realm}
+  PVE_STORAGE_NAME => #{storagename}
 "
 
 site = RestClient::Resource.new(url_base)
@@ -71,6 +72,16 @@ print ' list available templates for download: '.yellow
 site["nodes/#{nodename}/aplinfo"].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
   puts "#{response.code}"
 end
+
+print ' list all installed templates on a specific node: '.yellow
+site["nodes/#{nodename}/storage/#{storagename}/content"].get  :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+  puts "#{response.code}"
+  data = JSON.parse(response.body)['data']
+  data.each {|entry|
+    puts "#{entry['volid']}: #{entry['size']}" if entry['content'] == 'vztmpl'
+  }
+end
+
 
 print ' list all VM\'s on a node: '.yellow
 site["nodes/#{nodename}/openvz"].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
