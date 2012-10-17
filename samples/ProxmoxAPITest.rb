@@ -75,6 +75,9 @@ end
 print ' list available templates for download: '.yellow
 site["nodes/#{nodename}/aplinfo"].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
+  JSON.parse(response.body)['data'].each { |entry|
+    puts entry.inspect
+  }
 end
 
 print ' list all installed templates on a specific node: '.yellow

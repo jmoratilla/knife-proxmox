@@ -81,7 +81,7 @@ class Chef
         site["nodes/#{Chef::Config[:knife][:pve_node_name]}/storage/local/content"].get auth_params do |response, request, result, &block|
           JSON.parse(response.body)['data'].each { |entry|
             if entry['content'] == 'vztmpl' then
-              template_list << entry['volid'].chomp
+              template_list << entry['volid']
               template_list << (entry['size'].to_i/1048576).to_s + " MB"
             end
           }
