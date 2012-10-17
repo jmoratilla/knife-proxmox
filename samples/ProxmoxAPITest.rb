@@ -55,26 +55,30 @@ site['access/ticket'].post :username=>username,:realm=>realm,:password=>password
   puts "#{response.code}" 
 end 
 
+auth_params = {
+  :CSRFPreventionToken => csrf_prevention_token,
+  :cookie => token
+}
 
 puts 'GET'.blue
 
 print ' list all users in the cluster: '.yellow
-site['access/users'].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site['access/users'].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 print ' list cluster resources: '.yellow
-site['cluster/resources'].get :cookie => token do |response, request, result, &block|
+site['cluster/resources'].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 print ' list available templates for download: '.yellow
-site["nodes/#{nodename}/aplinfo"].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site["nodes/#{nodename}/aplinfo"].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 print ' list all installed templates on a specific node: '.yellow
-site["nodes/#{nodename}/storage/#{storagename}/content"].get  :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site["nodes/#{nodename}/storage/#{storagename}/content"].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
   data = JSON.parse(response.body)['data']
   data.each {|entry|
@@ -84,33 +88,32 @@ end
 
 
 print ' list all VM\'s on a node: '.yellow
-site["nodes/#{nodename}/openvz"].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site["nodes/#{nodename}/openvz"].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 print ' list all tasks in the cluster: '.yellow
-site["cluster/tasks"].get :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
-  puts "#{response.code}"
+site["cluster/tasks"].get auth_params do |response, request, result, &block|
+  puts "#{response.code}" 
 end
 
 puts 'POST'.blue
 
 print ' create a new user: '.yellow
-site['access/users'].post 'userid=test2@pve', :CSRFPreventionToken => csrf_prevention_token,:cookie => token do |response, request, result, &block|
+site['access/users'].post 'userid=test2@pve', auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 taskid = nil
 
 print ' download a template: '.yellow
-site["nodes/#{nodename}/aplinfo"].post "storage=local&template=ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz", :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site["nodes/#{nodename}/aplinfo"].post "storage=local&template=ubuntu-10.04-turnkey-appengine_11.3-1_i386.tar.gz", auth_params do |response, request, result, &block|
   puts "#{response.code}"
-  taskid = JSON.parse(response.body)['data']
-  puts "taskid: #{taskid}"
+  taskid = JSON.parse(response.body)['data'] # For last test (stop a running task)
 end
 
 print ' create an openvz VM: '.yellow
-site["nodes/#{nodename}/openvz"].post 'vmid=401&hostname=melon1&storage=local&password=melon123&ostemplate=local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz&memory=512&swap=512&disk=4&cpus=1&netif=ifname%3Deth0%2Cbridge%3Dvmbr0', :content_type => 'application/x-www-form-urlencoded; charset=UTF-8', :accept => 'application/json', 'CSRFPreventionToken'=>csrf_prevention_token, :cookie=>token do |response, request, result, &block|
+site["nodes/#{nodename}/openvz"].post 'vmid=401&hostname=melon1&storage=local&password=melon123&ostemplate=local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz&memory=512&swap=512&disk=4&cpus=1&netif=ifname%3Deth0%2Cbridge%3Dvmbr0', auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
@@ -118,7 +121,7 @@ end
 puts 'PUT'.blue
 
 print ' modify one user: '.yellow
-site['access/users/test@pve'].put 'comment=hello world', :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site['access/users/test@pve'].put 'comment=hello world', auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
@@ -128,16 +131,16 @@ sleep 10
 puts 'DELETE'.blue
 
 print ' destroy an existing user: '.yellow
-site['access/users/test2@pve'].delete :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site['access/users/test2@pve'].delete auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 print ' destroy an existing openvz VM: '.yellow
-site["nodes/#{nodename}/openvz/401"].delete :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site["nodes/#{nodename}/openvz/401"].delete auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
 
 print ' stop a running task: '.yellow
-site["nodes/#{nodename}/tasks/#{taskid}"].delete :CSRFPreventionToken => csrf_prevention_token, :cookie => token do |response, request, result, &block|
+site["nodes/#{nodename}/tasks/#{taskid}"].delete auth_params do |response, request, result, &block|
   puts "#{response.code}"
 end
