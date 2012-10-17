@@ -1,6 +1,26 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
 
+[2012-10-17]
+
+First preliminar version is working, but only as separate knife plugin files.
+
+In order to work, these files must be copied to your ~/.chef/plugins/knife directory.  If it
+doesn't exist, then you must create it.
+
+Actions implemented
+
+proxmox server create
+proxmox server destroy
+proxmox template available
+proxmox template list
+
+Next steps
+
+R.E.F.A.C.T.O.R
+
+Options in command line for each action
+
 
 2012-10-07]
 
