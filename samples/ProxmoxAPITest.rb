@@ -68,15 +68,20 @@ site['access/users'].get auth_params do |response, request, result, &block|
 end
 
 print ' list cluster resources: '.yellow
-site['cluster/resources'].get auth_params do |response, request, result, &block|
+site['cluster/resources?type=vm'].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
+  data = JSON.parse(response.body)['data']
+  data.each {|entry|
+    puts "vmid: #{entry['vmid']}, host: #{entry['name']}, type: #{entry['type']}" #if entry['type'] == 'openvz' or entry['type'] == 'qemu'
+  }
 end
 
 print ' list available templates for download: '.yellow
 site["nodes/#{nodename}/aplinfo"].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
-  JSON.parse(response.body)['data'].each { |entry|
-    puts entry.inspect
+  data = JSON.parse(response.body)['data']
+  data.each { |entry|
+    puts "#{entry['template']}: #{entry['os']}"
   }
 end
 
@@ -90,10 +95,16 @@ site["nodes/#{nodename}/storage/#{storagename}/content"].get auth_params do |res
 end
 
 
-print ' list all VM\'s on a node: '.yellow
+print ' list all VM\'s per node: '.yellow
 site["nodes/#{nodename}/openvz"].get auth_params do |response, request, result, &block|
   puts "#{response.code}"
+  data = JSON.parse(response.body)['data']
+  puts "#{nodename}:"
+  data.each {|entry|
+    puts "\t#{entry['vmid']}: #{entry['name']}"
+  }
 end
+
 
 print ' list all tasks in the cluster: '.yellow
 site["cluster/tasks"].get auth_params do |response, request, result, &block|
@@ -120,6 +131,10 @@ site["nodes/#{nodename}/openvz"].post 'vmid=401&hostname=melon1&storage=local&pa
   puts "#{response.code}"
 end
 
+print ' create an openvz VM without vmid: '.yellow
+site["nodes/#{nodename}/openvz"].post 'hostname=melon2&storage=local&password=melon123&ostemplate=local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz&memory=512&swap=512&disk=4&cpus=1&netif=ifname%3Deth0%2Cbridge%3Dvmbr0', auth_params do |response, request, result, &block|
+  puts "#{response.code}"
+end
 
 puts 'PUT'.blue
 
