@@ -12,9 +12,6 @@ class Chef
       site = nil
       auth_params = nil
       
-      def self.included(includer)
-        includer.class_eval do
-
           deps do
             require 'rubygems'
             require 'rest_client'
@@ -50,8 +47,12 @@ class Chef
             :long  => "--node nodename",
             :description => "Proxmox VE server name where you will actuate",
             :proc  => Proc.new {|node| Chef::Config[:knife][:pve_node_name] = node }
-        end
-      end
+          
+          # TODO: parameters for openvz should be in other object
+          option :openvz_hostname,
+            :short => "-N hostname",
+            :description => "OpenVZ hostname",
+            :proc  => Proc.new {|hostname| }
 
       def run
         site = RestClient::Resource.new(Chef::Config[:knife][:pve_cluster_url])

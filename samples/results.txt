@@ -1,0 +1,22 @@
+$ knife proxmox template list -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve
+Name                                                         Size  
+local:vztmpl/debian-6.0-request-tracker_3.8.8-2_i386.tar.gz  171 MB
+local:vztmpl/old_ubuntu-11.10-x86_64.tar.gz                  124 MB
+local:vztmpl/ubuntu-10.04-standard_10.04-4_i386.tar.gz       135 MB
+local:vztmpl/ubuntu-11.10-x86_64-jorge1-.tar.gz              124 MB
+local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz              154 MB
+
+$ knife proxmox template available -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve
+Name                                                       Operating System
+debian-6-turnkey-concrete5_12.0-1_i386.tar.gz              debian-6        
+ubuntu-10.04-turnkey-prestashop_11.3-1_i386.tar.gz         ubuntu-10.04    
+debian-6-turnkey-joomla25_12.0-1_i386.tar.gz               debian-6        
+debian-6-turnkey-tomcat-apache_12.0-1_i386.tar.gz          debian-6        
+debian-6-turnkey-appflower_12.0-1_i386.tar.gz              debian-6        
+debian-6-turnkey-etherpad_12.0-1_i386.tar.gz               debian-6        
+debian-6-turnkey-vanilla_12.0-1_i386.tar.gz                debian-6        
+debian-6-turnkey-jenkins_12.0-1_i386.tar.gz                debian-6        
+ubuntu-10.04-turnkey-twiki_11.3-1_i386.tar.gz              ubuntu-10.04    
+debian-6-turnkey-piwik_12.0-1_i386.tar.gz                  debian-6
+
+  

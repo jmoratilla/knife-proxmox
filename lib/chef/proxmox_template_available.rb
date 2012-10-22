@@ -12,8 +12,8 @@ class Chef
       site = nil
       auth_params = nil
       
-      def self.included(includer)
-        includer.class_eval do
+#      def self.included(includer)
+#        includer.class_eval do
 
           deps do
             require 'rubygems'
@@ -50,8 +50,8 @@ class Chef
             :long  => "--node nodename",
             :description => "Proxmox VE server name where you will actuate",
             :proc  => Proc.new {|node| Chef::Config[:knife][:pve_node_name] = node }
-        end
-      end
+#        end
+#      end
 
       def run
         site = RestClient::Resource.new(Chef::Config[:knife][:pve_cluster_url])

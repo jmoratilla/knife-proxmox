@@ -3,8 +3,7 @@
 # Author: Jorge Juan Moratilla Porras
 # 
 # Description: some tests with the Proxmox VE API
-#
-#TODO: PUT
+
 
 require 'rubygems'
 require 'rest_client'
