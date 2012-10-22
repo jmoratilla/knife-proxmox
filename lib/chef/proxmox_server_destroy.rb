@@ -74,14 +74,24 @@ class Chef
         auth_params = {:CSRFPreventionToken => csrf_prevention_token, :cookie => token}
 
         name = config[:chef_node_name]
-        server_vmid = name_to_vmid(name)
+        puts "node to destroy: #{name}"
+        server_vmid = name_to_vmid(site,auth_params,name)
         site["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{server_vmid}"].delete auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
         end
 
       end
       
-      def vmid
+      def name_to_vmid(connection,auth,name)
+        connection['cluster/resources?type=vm'].get auth do |response, request, result, &block|
+          data = JSON.parse(response.body)['data']
+          data.each {|entry|
+            return entry['vmid'] if entry['name'].to_s.match(name)
+          }
+        end
+      end
+      
+      
       
       # Extracted from Chef::Knife.delete_object, because it has a
       # confirmation step built in... By specifying the '--purge'
