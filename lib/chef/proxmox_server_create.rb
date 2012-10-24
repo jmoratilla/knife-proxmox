@@ -3,6 +3,7 @@ require 'rubygems'
 require 'rest_client'
 require 'json'
 require 'cgi'
+require 'chef/log'
 
 class Chef
   class Knife
@@ -18,6 +19,7 @@ class Chef
             require 'rest_client'
             require 'json'
             require 'cgi'
+            require 'chef/log'
           end
 
           option :pve_cluster_url,
@@ -124,12 +126,25 @@ class Chef
         vm_template = template_number_to_name(site,auth_params,config[:vm_template],vm_storage) || 'local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz'
         
         vm_definition = "vmid=#{vm_id}&hostname=#{vm_hostname}&storage=#{vm_storage}&password=#{vm_password}&ostemplate=#{vm_template}&memory=#{vm_memory}&swap=#{vm_swap}&disk=#{vm_disk}&cpus=#{vm_cpus}&netif=#{vm_netif}"
-        ui.msg vm_definition
+        Chef::Log.debug(vm_definition)
         
         site["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz"].post "#{vm_definition}", auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
         end
-
+        
+        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
+        (1..30).each do
+          print '.'
+          sleep 1
+        end
+        puts ""
+        
+        ui.msg("Starting VM #{vm_id}....")
+        site["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/start"].post "", auth_params do |response, request, result, &block|
+          ui.msg("Result: #{response.code}")
+        end
+        
+        #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil
       end
       
       def new_vmid(connection,auth)

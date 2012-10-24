@@ -51,7 +51,10 @@ class Chef
         :short => "-N NAME",
         :long => "--node-name NAME",
         :description => "The name of the node and client to delete, if it differs from the server name.  Only has meaning when used with the '--purge' option."
-
+        
+      option :vm_id,
+        :long  => "--vmid number",
+        :description => "The numeric identifier of the VM"
 
       def run
         site = RestClient::Resource.new(Chef::Config[:knife][:pve_cluster_url])
@@ -73,10 +76,31 @@ class Chef
         end
         auth_params = {:CSRFPreventionToken => csrf_prevention_token, :cookie => token}
 
-        name = config[:chef_node_name]
-        puts "node to destroy: #{name}"
-        server_vmid = name_to_vmid(site,auth_params,name)
-        site["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{server_vmid}"].delete auth_params do |response, request, result, &block|
+        #TODO: debe detectar que parametro se ha utilizado: nombre o vmid
+        vm_id = nil
+        
+        if (config[:vm_id].nil? && config[:chef_node_name].size != 0) then
+          name = config[:chef_node_name]
+          puts "node to destroy: #{name}"
+          vm_id = name_to_vmid(site,auth_params,name)
+        elsif (! config[:vm_id].nil?) then
+          vm_id = config[:vm_id]
+        end
+        
+        #TODO: Parar la maquina si esta arrancada.
+        ui.msg("Stopping VM #{vm_id}....")
+        site["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/stop"].post "", auth_params do |response, request, result, &block|
+          ui.msg("Result: #{response.code}")
+        end
+        
+        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
+        (1..30).each do
+          print '.'
+          sleep 1
+        end
+        puts ""
+        
+        site["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}"].delete auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
         end
 

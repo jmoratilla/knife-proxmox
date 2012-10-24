@@ -1,6 +1,52 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
 
+[2012-10-24]
+
+Improved knife commands.  Needs refactor internally
+Examples:
+
+List templates installed
+$ knife proxmox  template list -U https://localhost:8006/api2/json/ -n localhost -u test -p test123 -R pve -VV
+DEBUG: Using configuration from /home/jorge/workspace/chef-repo/.chef/knife.rb
+Id  Name                                                         Size  
+0   local:vztmpl/debian-6.0-request-tracker_3.8.8-2_i386.tar.gz  171 MB
+1   local:vztmpl/old_ubuntu-11.10-x86_64.tar.gz                  124 MB
+2   local:vztmpl/ubuntu-10.04-standard_10.04-4_i386.tar.gz       135 MB
+3   local:vztmpl/ubuntu-11.10-x86_64-jorge1-.tar.gz              124 MB
+4   local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz              154 MB
+ 
+
+List templates available to download
+$ knife proxmox template available -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve  -VV
+DEBUG: Using configuration from /home/jorge/workspace/chef-repo/.chef/knife.rb
+Name                                                       Operating System
+debian-6-turnkey-concrete5_12.0-1_i386.tar.gz              debian-6        
+ubuntu-10.04-turnkey-prestashop_11.3-1_i386.tar.gz         ubuntu-10.04    
+debian-6-turnkey-joomla25_12.0-1_i386.tar.gz               debian-6        
+debian-6-turnkey-tomcat-apache_12.0-1_i386.tar.gz          debian-6        
+debian-6.0-wordpress_3.4.2-1_i386.tar.gz                   debian-6.0 .....
+
+
+Create a server
+$ knife proxmox server create -U https://localhost:8006/api2/json/ -n localhost -u test -p test123 -R pve -N vm-node1 --template 4 -VV 
+DEBUG: Using configuration from /home/jorge/workspace/chef-repo/.chef/knife.rb
+DEBUG: vmid=303&hostname=vm-node1&storage=local&password=pve123&ostemplate=local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz&memory=512&swap=512&disk=4&cpus=1&netif=ifname%3Deth0%2Cbridge%3Dvmbr0
+Result: 200
+..............................
+Starting VM 303....
+Result: 200
+
+Destroy a server
+$ knife proxmox server destroy -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve -N vm-node1 -VV
+DEBUG: Using configuration from /home/jorge/workspace/chef-repo/.chef/knife.rb
+node to destroy: vm-node1
+Stopping VM 303....
+Result: 200
+..............................
+Result: 200
+
+
 [2012-10-17]
 
 First preliminar version is working, but only as separate knife plugin files.
