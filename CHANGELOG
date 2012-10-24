@@ -1,21 +1,10 @@
-Authors: Jorge Moratilla
+Author: Jorge Moratilla
 Date: 2012-10-07
 
-This knife plugin allows to access Proxmox Virtualization Environment (Proxmox VE or PVE) through its API.
-It allows you to lists templates installed on the server/cluster (like images or amis), create a server or
-destroy it.
+[2012-10-24]
 
-Currently it only supports management of openVZ instances, but KVM instances will be able too.
-
-
-Actions implemented
-
-proxmox server create
-proxmox server destroy
-proxmox template available
-proxmox template list
-
-Some Examples 
+Improved knife commands.  Needs refactor internally
+Examples:
 
 List templates installed
 $ knife proxmox  template list -U https://localhost:8006/api2/json/ -n localhost -u test -p test123 -R pve -VV
@@ -57,7 +46,56 @@ Result: 200
 ..............................
 Result: 200
 
-This gem must be installed on your system using the command
 
-$ gem install knife-proxmox
+[2012-10-17]
+
+First preliminar version is working, but only as separate knife plugin files.
+
+In order to work, these files must be copied to your ~/.chef/plugins/knife directory.  If it
+doesn't exist, then you must create it.
+
+Actions implemented
+
+proxmox server create
+proxmox server destroy
+proxmox template available
+proxmox template list
+
+Next steps
+
+R.E.F.A.C.T.O.R
+
+Options in command line for each action
+
+
+2012-10-07]
+
+This project is a plugin for knife that allows a user to list templates, create and delete 
+proxmox virtual machines (openvz instances mainly)
+
+I've two ways to do this:
+A) Create a knife plugin directly using command line tools (pvesh and pvesm)
+B) Create a provider for fog (github.com/fog/fog) and then create the knife plugin based on fog
+
+Thoughts:
+Option A is the easy quick and dirty solution for me now.
+Option B is the proper way to do it.  Unfortunately, I'm not able to afford it.  It's too complex.
+
+Actions:
+Option A)
+
+. knife proxmox template list
+|- pvesh get /nodes/SERVER_NAME/storage/STORAGE/content
+|--{
+      "content" : "vztmpl",
+      "format" : "tgz",
+      "size" : 161655654,
+      "volid" : "local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz"
+   },
+
+. knife proxmox server create
+|- pvesh create /nodes/localhost/openvz -ostemplate local:vztmpl/ubuntu-11.10-x86_64-jorge2-.tar.gz -vmid 106 -cpus 1 -memory 1024 -disk 4 -hostname jorge_test
+
+. knife proxmox server destroy
+|- pvesh destroy 106
 
