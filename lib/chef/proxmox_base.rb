@@ -1,6 +1,6 @@
 require 'chef/knife'
 #TODO: Testing of everything
-
+#TODO: All inputs MUST be checked and errors MUST be catched.
 class Chef
   class Knife
     module ProxmoxBase

@@ -13,9 +13,7 @@ Gem::Specification.new do |s|
   s.description = s.summary
   s.extra_rdoc_files = ["README", "LICENSE" ]
 
-  s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.files         = Dir['lib/**/*.rb'] + Dir['bin/*']
   s.add_dependency "chef", ">= 0.10.10"
   s.add_dependency "rest_client"
   s.add_dependency "json"
