@@ -1,6 +1,7 @@
 Description Resource    Path    Location    Type
 FIXME: agregar numeracion a los templates para facilitar la creacion de maquinas    proxmox_template_list.rb    /knife-proxmox/lib/chef line 54 Studio Task
 FIXME: storage = local debería ser tambien un parametro configurable    proxmox_template_list.rb    /knife-proxmox/lib/chef line 53 Studio Task
+TODO: Create a good gem using this tutorial http://guides.rubygems.org/make-your-own-gem/#writing-tests
 TODO: All inputs MUST be checked and errors MUST be catched.
 TODO: Testing of everything
 TODO: change ticket.gsub for CGI.escape(str)    proxmox_server_create.rb    /knife-proxmox/lib/chef line 110    Studio Task
