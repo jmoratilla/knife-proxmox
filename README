@@ -61,3 +61,14 @@ This gem must be installed on your system using the command
 
 $ gem install knife-proxmox
 
+If you want to read values from the environment variables modify your knife.rb:
+
+knife[:pve_cluster_url] = "#{ENV['PVE_CLUSTER_URL']}"
+knife[:pve_user_name]   = "#{ENV['PVE_USER_NAME']}"
+knife[:pve_node_name]   = "#{ENV['PVE_NODE_NAME']}"
+knife[:pve_user_realm]  = "#{ENV['PVE_USER_REALM']}"
+
+However I don't recommend to have the user password as a environment variable.
+knife[:pve_user_password] = "#{ENV['PVE_CLUSTER_URL']}"
+
+
