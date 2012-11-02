@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.name        = "knife-proxmox"
   s.version     = Knife::Proxmox::VERSION
   s.has_rdoc = false
-  s.authors     = ["Jorge Moratilla"]
-  s.email       = ["jorge@moratilla.com"]
+  s.authors     = ["Jorge Moratilla", "Sergio Galvan"]
+  s.email       = ["jorge@moratilla.com","sergalma@gmail.com"]
   s.homepage = "http://wiki.opscode.com/display/chef"
   s.summary = "ProxmoxVE Support for Chef's Knife Command"
   s.description = s.summary

@@ -1,4 +1,4 @@
-Authors: Jorge Moratilla
+Authors: Jorge Moratilla, Sergio Galvan
 Date: 2012-10-07
 
 This knife plugin allows to access Proxmox Virtualization Environment (Proxmox VE or PVE) through its API.
