@@ -10,12 +10,21 @@ Currently it only supports management of openVZ instances, but KVM instances wil
 
 Actions implemented
 
+proxmox server list
 proxmox server create
 proxmox server destroy
 proxmox template available
 proxmox template list
 
 Some Examples 
+
+List servers
+$ knife proxmox server list
+Id   Name                 Type    Status
+104  tetatet.jnlabs.isp   openvz  down  
+470  sg-node1.jnlabs.isp  openvz  up  
+102  test                 qemu    down  
+202  chef-client1         openvz  down 
 
 List templates installed
 $ knife proxmox  template list -U https://localhost:8006/api2/json/ -n localhost -u test -p test123 -R pve -VV

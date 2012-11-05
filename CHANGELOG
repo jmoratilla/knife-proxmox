@@ -1,6 +1,18 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
 
+[2012-11-05]
+
+First refactor, ProxmoxBase has now all the common parameters
+Added proxmox server list to show current servers
+Example:
+$ knife proxmox server list
+Id   Name                 Type    Status
+104  tetatet.jnlabs.isp   openvz  down  
+470  sg-node1.jnlabs.isp  openvz  up  
+102  test                 qemu    down  
+202  chef-client1         openvz  down 
+
 [2012-10-24]
 
 Improved knife commands.  Needs refactor internally

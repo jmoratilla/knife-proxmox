@@ -2,7 +2,6 @@
 $:.push File.expand_path("../lib", __FILE__)
 require "knife-proxmox/version"
 
-#TODO: Create a good gem using this tutorial http://guides.rubygems.org/make-your-own-gem/#writing-tests
 Gem::Specification.new do |s|
   s.name        = "knife-proxmox"
   s.version     = Knife::Proxmox::VERSION
