@@ -12,6 +12,8 @@ Actions implemented
 
 proxmox server list
 proxmox server create
+proxmox server start
+proxmox server stop
 proxmox server destroy
 proxmox template available
 proxmox template list
@@ -56,6 +58,18 @@ Result: 200
 ..............................
 Starting VM 303....
 Result: 200
+
+Starting a server
+$ knife proxmox server start --vmid 401
+Starting VM 401....
+Result: 200
+
+
+Stopping a server
+$ knife proxmox server stop --vmid 103
+Stoping VM 103....
+Result: 200
+
 
 Destroy a server
 $ knife proxmox server destroy -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve -N vm-node1 -VV

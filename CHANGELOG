@@ -1,6 +1,18 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
 
+[2012-11-06]
+
+Added server start and stop commands
+$ knife proxmox server start --vmid 401
+Starting VM 401....
+Result: 200
+
+$ knife proxmox server stop --vmid 103
+Stoping VM 103....
+Result: 200
+
+
 [2012-11-05]
 
 First refactor, ProxmoxBase has now all the common parameters
