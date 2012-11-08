@@ -94,4 +94,12 @@ knife[:pve_user_realm]  = "#{ENV['PVE_USER_REALM']}"
 However I don't recommend to have the user password as a environment variable.
 knife[:pve_user_password] = "#{ENV['PVE_CLUSTER_URL']}"
 
+Environment Variables
+
+PVE_CLUSTER_URL = https://<proxmox_server>:8006/api2/json/
+PVE_USER_NAME   = <user>
+PVE_PASSWORD_NAME = <password>
+PVE_USER_REALM  = <pam|pve|others>
+PVE_NODE_NAME   = <nodename>
+
 
