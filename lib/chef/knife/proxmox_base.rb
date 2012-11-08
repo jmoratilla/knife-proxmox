@@ -15,6 +15,7 @@ class Chef
             require 'chef/json_compat'
             require 'cgi'
             require 'chef/log'
+            require 'set'
           end
           
           # options

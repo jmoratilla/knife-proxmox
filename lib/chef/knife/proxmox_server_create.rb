@@ -86,7 +86,7 @@ class Chef
         #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil
       end
       
-      # waitfor end of the task, need the taskid and the timeout
+      # TODO: waitfor end of the task, need the taskid and the timeout
       def waitfor(taskid,timeout=30)
         timeout.times {
           @connection["cluster/tasks"].get "", @auth_params do |response, request, result, &block|
