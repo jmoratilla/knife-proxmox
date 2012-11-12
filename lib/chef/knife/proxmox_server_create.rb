@@ -48,6 +48,10 @@ class Chef
       option :vm_template,
         :long  => "--template number",
         :description => "id of the template"
+        
+      option :vm_ipaddress,
+        :long  => "--ipaddress IP Address",
+        :description => "force guest to use venet interface with this ip address"
 
       def run
         # Needed
@@ -61,27 +65,58 @@ class Chef
         vm_memory   = config[:vm_memory]   || 512
         vm_disk     = config[:vm_disk]     || 4
         vm_swap     = config[:vm_swap]     || 512
+        vm_ipaddress= config[:vm_ipaddress]|| nil
         vm_netif    = config[:vm_netif]    || 'ifname%3Deth0%2Cbridge%3Dvmbr0'
         vm_template = template_number_to_name(config[:vm_template],vm_storage) || 'local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz'
         
-        vm_definition = "vmid=#{vm_id}&hostname=#{vm_hostname}&storage=#{vm_storage}&password=#{vm_password}&ostemplate=#{vm_template}&memory=#{vm_memory}&swap=#{vm_swap}&disk=#{vm_disk}&cpus=#{vm_cpus}&netif=#{vm_netif}"
+        vm_definition = "vmid=#{vm_id}&hostname=#{vm_hostname}&storage=#{vm_storage}&password=#{vm_password}&ostemplate=#{vm_template}&memory=#{vm_memory}&swap=#{vm_swap}&disk=#{vm_disk}&cpus=#{vm_cpus}"
+        
+        # Add ip_address parameter to vm_definition if it's provided by CLI
+        if (config[:vm_ipaddress]) then 
+          vm_definition += "&ip_address=" + vm_ipaddress
+        elsif (config[:vm_netif] || vm_netif) then
+          vm_definition += "&netif=" + vm_netif
+        end
+        
         Chef::Log.debug(vm_definition)
+        
+        taskid = nil
         
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz"].post "#{vm_definition}", @auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
+          
+          # take the response and extract the taskid
+          taskid = JSON.parse(response.body)['data'] 
         end
         
         #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
-        (1..30).each do
-          print '.'
-          sleep 1
-        end
-        puts ""
+        taskstatus = nil
+        while taskstatus.nil? do
+          sleep(1)
+          print "."
+          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
+            taskstatus = JSON.parse(response.body)['data']['exitstatus']
+          end
+          puts taskstatus if !taskstatus.nil?
+        end 
         
         ui.msg("Starting VM #{vm_id}....")
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/start"].post "", @auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
+          # take the response and extract the taskid
+          taskid = JSON.parse(response.body)['data']
         end
+        
+        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
+        taskstatus = nil
+        while taskstatus.nil? do
+          sleep(1)
+          print "."
+          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
+            taskstatus = JSON.parse(response.body)['data']['exitstatus']
+          end
+          puts taskstatus if !taskstatus.nil?
+        end 
         
         #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil
       end

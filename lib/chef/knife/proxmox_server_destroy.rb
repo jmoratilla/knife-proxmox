@@ -41,22 +41,43 @@ class Chef
           vm_id = config[:vm_id]
         end
         
+        taskid=nil
         #TODO: Parar la maquina si esta arrancada.
         ui.msg("Stopping VM #{vm_id}....")
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/stop"].post "", @auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
+          # take the response and extract the taskid
+          taskid = JSON.parse(response.body)['data']
         end
         
         #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
-        (1..30).each do
-          print '.'
-          sleep 1
-        end
-        puts ""
+        taskstatus = nil
+        while taskstatus.nil? do
+          sleep(1)
+          print "."
+          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
+            taskstatus = JSON.parse(response.body)['data']['exitstatus']
+          end
+          puts taskstatus if !taskstatus.nil?
+        end 
         
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}"].delete @auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
+          # take the response and extract the taskid
+          taskid = JSON.parse(response.body)['data']
         end
+        
+        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
+        taskstatus = nil
+        while taskstatus.nil? do
+          sleep(1)
+          print "."
+          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
+            taskstatus = JSON.parse(response.body)['data']['exitstatus']
+          end
+          puts taskstatus if !taskstatus.nil?
+        end 
+        
 
       end
       
