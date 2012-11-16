@@ -94,6 +94,72 @@ class Chef
           {:CSRFPreventionToken => csrf_prevention_token, :cookie => token} 
         end
       end
+      
+      # new_vmid: calculates a new vmid from the highest existing vmid
+      def new_vmid
+        vmid ||= @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
+          data = JSON.parse(response.body)['data']
+          vmids = Set[]
+          data.each {|entry|
+            vmids.add entry['vmid']
+          }
+          vmids.max + 1
+        end
+      end
+      
+      # template_number_to_name: converts the id from the template list to the real name in the storage
+      # of the node
+      def template_number_to_name(number,storage)
+        template_list = []
+        #TODO: esta parte hay que sacarla a un modulo comun de acceso a templates
+        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/storage/#{storage}/content"].get @auth_params do |response, request, result, &block|
+          JSON.parse(response.body)['data'].each { |entry|
+            if entry['content'] == 'vztmpl' then
+              template_list << entry['volid']
+            end
+          }
+        end
+        return CGI.escape(template_list[number.to_i])
+      end
+      
+      # server_name_to_vmid: Use the name of the server to get the vmid
+      def server_name_to_vmid(name)
+        @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
+          data = JSON.parse(response.body)['data']
+          data.each {|entry|
+            return entry['vmid'] if entry['name'].to_s.match(name)
+          }
+        end
+      end
+      
+      # waitfor end of the task, need the taskid and the timeout
+      def waitfor(taskid, timeout=30)
+        taskstatus = nil
+        while taskstatus.nil? or timeout== 0 do
+          print "."
+          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
+            taskstatus = JSON.parse(response.body)['data']['exitstatus']
+          end
+          timeout-=1
+          sleep(1)
+        end
+      end
+      
+      # Extracted from Chef::Knife.delete_object, because it has a
+      # confirmation step built in... By specifying the '--purge'
+      # flag (and also explicitly confirming the server destruction!)
+      # the user is already making their intent known.  It is not
+      # necessary to make them confirm two more times.
+      def destroy_item(klass, name, type_name)
+        begin
+          object = klass.load(name)
+          object.destroy
+          ui.warn("Deleted #{type_name} #{name}")
+        rescue Net::HTTPServerException
+          ui.warn("Could not find a #{type_name} named #{name} to delete!")
+        end
+      end
+      
     end # module
   end # class 
 end # class

@@ -89,17 +89,9 @@ class Chef
           taskid = JSON.parse(response.body)['data'] 
         end
         
-        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
-        taskstatus = nil
-        while taskstatus.nil? do
-          sleep(1)
-          print "."
-          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
-            taskstatus = JSON.parse(response.body)['data']['exitstatus']
-          end
-          puts taskstatus if !taskstatus.nil?
-        end 
+        waitfor(taskid)
         
+        # TODO: It's possible to use an action defined in another class? Ex: ProxmoxServerStart.run()?
         ui.msg("Starting VM #{vm_id}....")
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/start"].post "", @auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
@@ -107,54 +99,11 @@ class Chef
           taskid = JSON.parse(response.body)['data']
         end
         
-        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
-        taskstatus = nil
-        while taskstatus.nil? do
-          sleep(1)
-          print "."
-          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
-            taskstatus = JSON.parse(response.body)['data']['exitstatus']
-          end
-          puts taskstatus if !taskstatus.nil?
-        end 
+        waitfor(taskid)
         
         #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil
       end
-      
-      # TODO: waitfor end of the task, need the taskid and the timeout
-      def waitfor(taskid,timeout=30)
-        timeout.times {
-          @connection["cluster/tasks"].get "", @auth_params do |response, request, result, &block|
-            ui.msg("Result: #{response.code}")
-          end
-        }
-      end
-      
-      def new_vmid
-        vmid ||= @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
-          data = JSON.parse(response.body)['data']
-          vmids = Set[]
-          data.each {|entry|
-            vmids.add entry['vmid']
-          }
-          vmids.max + 1
-        end
-      end
-      
-      
-      def template_number_to_name(number,storage)
-        template_list = []
-        #TODO: esta parte hay que sacarla a un modulo comun de acceso a templates
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/storage/#{storage}/content"].get @auth_params do |response, request, result, &block|
-          JSON.parse(response.body)['data'].each { |entry|
-            if entry['content'] == 'vztmpl' then
-              template_list << entry['volid']
-            end
-          }
-        end
-        return CGI.escape(template_list[number.to_i])
-      end
-      
+
     end
   end
 end

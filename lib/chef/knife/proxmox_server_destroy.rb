@@ -4,12 +4,11 @@ require 'chef/knife/proxmox_base'
 class Chef
   class Knife
     class ProxmoxServerDestroy < Knife
-
       include Knife::ProxmoxBase
 
       banner "knife proxmox server destroy (options)"
 
-# Options for this action
+      # Options for this action
       option :purge,
         :short => "-P",
         :long => "--purge",
@@ -30,7 +29,7 @@ class Chef
         # Needed
         connection
         
-        #TODO: debe detectar que parametro se ha utilizado: nombre o vmid
+        #TODO: must detect which parameter has been used: name or vmid
         vm_id = nil
         
         if (config[:vm_id].nil? and config[:chef_node_name].empty?) then
@@ -39,30 +38,21 @@ class Chef
         elsif (!config[:chef_node_name].empty?)
             name = config[:chef_node_name]
             puts "node to destroy: #{name}"
-            vm_id = name_to_vmid(name)
+            vm_id = server_name_to_vmid(name)
         else
           vm_id = config[:vm_id]
         end
         
         taskid=nil
-        #TODO: Parar la maquina si esta arrancada.
-        ui.msg("Stopping VM #{vm_id}....")
+        #TODO: Stop the server
+        ui.msg("Stopping VM #{vm_id}...")
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/stop"].post "", @auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
           # take the response and extract the taskid
           taskid = JSON.parse(response.body)['data']
         end
         
-        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
-        taskstatus = nil
-        while taskstatus.nil? do
-          sleep(1)
-          print "."
-          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
-            taskstatus = JSON.parse(response.body)['data']['exitstatus']
-          end
-          puts taskstatus if !taskstatus.nil?
-        end 
+        waitfor(taskid)
         
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}"].delete @auth_params do |response, request, result, &block|
           ui.msg("Result: #{response.code}")
@@ -70,45 +60,10 @@ class Chef
           taskid = JSON.parse(response.body)['data']
         end
         
-        #TODO: monitorizar la tarea para que cuando se crea la maquina, avisar al usuario
-        taskstatus = nil
-        while taskstatus.nil? do
-          sleep(1)
-          print "."
-          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
-            taskstatus = JSON.parse(response.body)['data']['exitstatus']
-          end
-          puts taskstatus if !taskstatus.nil?
-        end 
+        waitfor(taskid)
         
-
       end
       
-      def name_to_vmid(name)
-        @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
-          data = JSON.parse(response.body)['data']
-          data.each {|entry|
-            return entry['vmid'] if entry['name'].to_s.match(name)
-          }
-        end
-      end
-      
-      
-      
-      # Extracted from Chef::Knife.delete_object, because it has a
-      # confirmation step built in... By specifying the '--purge'
-      # flag (and also explicitly confirming the server destruction!)
-      # the user is already making their intent known.  It is not
-      # necessary to make them confirm two more times.
-      def destroy_item(klass, name, type_name)
-        begin
-          object = klass.load(name)
-          object.destroy
-          ui.warn("Deleted #{type_name} #{name}")
-        rescue Net::HTTPServerException
-          ui.warn("Could not find a #{type_name} named #{name} to delete!")
-        end
-      end      
     end
   end
 end
