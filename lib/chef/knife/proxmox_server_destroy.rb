@@ -33,11 +33,14 @@ class Chef
         #TODO: debe detectar que parametro se ha utilizado: nombre o vmid
         vm_id = nil
         
-        if (config[:vm_id].nil? && config[:chef_node_name].size != 0) then
-          name = config[:chef_node_name]
-          puts "node to destroy: #{name}"
-          vm_id = name_to_vmid(name)
-        elsif (! config[:vm_id].nil?) then
+        if (config[:vm_id].nil? and config[:chef_node_name].empty?) then
+          ui.error("You must use --vmid <id> or -N <Hostname>")
+          exit 1
+        elsif (!config[:chef_node_name].empty?)
+            name = config[:chef_node_name]
+            puts "node to destroy: #{name}"
+            vm_id = name_to_vmid(name)
+        else
           vm_id = config[:vm_id]
         end
         

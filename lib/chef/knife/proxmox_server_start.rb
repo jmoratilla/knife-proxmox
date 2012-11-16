@@ -17,6 +17,7 @@ class Chef
         # Needed
         connection
         vm_id = nil
+        check_config_parameter(:vm_id)
         
         vm_id = config[:vm_id]
         ui.msg("Starting VM #{vm_id}....")

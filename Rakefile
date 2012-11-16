@@ -18,6 +18,8 @@
 #
 
 require 'bundler'
+require 'rubygems'
+require 'rubygems/package_task'
 Bundler::GemHelper.install_tasks
 
 
@@ -32,8 +34,17 @@ task :build => :gemspec do
   FileUtils.mkdir_p "pkg"
   FileUtils.mv "#{gemspec.name}-#{gemspec.version}.gem", "pkg"
 end
- 
+
+desc "Remove gem locally"
+task :remove => :build do
+  system "gem uninstall #{gemspec.name}"
+end
+
 desc "Install gem locally"
-task :install => :build do
+task :install => :remove do
   system "gem install pkg/#{gemspec.name}-#{gemspec.version}"
 end
+
+
+desc "Let's do a full rebuild"
+task :rebuild => [:remove, :gemspec, :build, :install]

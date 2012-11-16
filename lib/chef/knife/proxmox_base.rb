@@ -52,7 +52,29 @@ class Chef
         end
       end
       
-      def connection        
+      # Checks that the parameter provided is defined in knife.rb
+      def check_global_parameter(value)
+        if (Chef::Config[:knife][value].nil? or Chef::Config[:knife][value].empty?) then
+          ui.error "knife[:#{value.to_s}] is empty, define a value for it and try again"
+          exit 1
+        end
+        Chef::Log.debug("knife[:#{value}] = " + Chef::Config[:knife][value])
+      end
+      
+      def check_config_parameter(value)
+        if (config[value].nil? or config[value].empty?) then
+          ui.error "--#{value} is empty, define a value for it and try again"
+          exit 1
+        end
+      end
+      
+      # Establishes the connection with proxmox server
+      def connection
+        # First, let's check we have all info needed to connect to pve
+        [:pve_cluster_url, :pve_node_name, :pve_user_name, :pve_user_password, :pve_user_realm].each do |value|
+          check_global_parameter(value)
+        end
+        
         @connection ||= RestClient::Resource.new(Chef::Config[:knife][:pve_cluster_url])
         @auth_params ||= begin
           token = nil
