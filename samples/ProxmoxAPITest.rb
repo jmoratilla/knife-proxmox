@@ -93,6 +93,16 @@ site["nodes/#{nodename}/storage/#{storagename}/content"].get auth_params do |res
   }
 end
 
+vm_id = 201
+print ' list all server attributes for vmid = 201: '.yellow
+site["nodes/#{nodename}/openvz/#{vm_id}/config"].get auth_params do |response, request, result, &block|
+  puts "#{response.code}"
+  data = JSON.parse(response.body)['data']
+  puts "#{nodename}:"
+  data.keys.each {|entry|
+    puts "\t#{entry}: #{data[entry]}" if entry == 'netif'
+  }
+end
 
 print ' list all VM\'s per node: '.yellow
 site["nodes/#{nodename}/openvz"].get auth_params do |response, request, result, &block|
