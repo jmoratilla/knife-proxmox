@@ -34,7 +34,7 @@ class Chef
         vm_id = nil
         
         if (config[:vm_id].nil? and config[:chef_node_name].nil?) then
-          ui.error("You must use --vmid <id> or -N <Hostname>")
+          ui.error("You must use -I <id> or -H <Hostname>")
           exit 1
         elsif (!config[:chef_node_name].nil?)
             name = config[:chef_node_name]
