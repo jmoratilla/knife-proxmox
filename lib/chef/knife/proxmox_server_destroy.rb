@@ -17,11 +17,12 @@ class Chef
         :description => "Destroy corresponding node and client on the Chef Server, in addition to destroying the Rackspace node itself. Assumes node and client have the same name as the server (if not, add the '--node-name' option)."
 
       option :chef_node_name,
-        :short => "-N NAME",
-        :long => "--node-name NAME",
+        :short => "-H hostname",
+        :long => "--hostname hostname",
         :description => "The name of the node and client to delete, if it differs from the server name.  Only has meaning when used with the '--purge' option."
         
       option :vm_id,
+        :short => "-I number",
         :long  => "--vmid number",
         :description => "The numeric identifier of the VM"
 
@@ -32,10 +33,10 @@ class Chef
         #TODO: must detect which parameter has been used: name or vmid
         vm_id = nil
         
-        if (config[:vm_id].nil? and config[:chef_node_name].empty?) then
+        if (config[:vm_id].nil? and config[:chef_node_name].nil?) then
           ui.error("You must use --vmid <id> or -N <Hostname>")
           exit 1
-        elsif (!config[:chef_node_name].empty?)
+        elsif (!config[:chef_node_name].nil?)
             name = config[:chef_node_name]
             puts "node to destroy: #{name}"
             vm_id = server_name_to_vmid(name)
@@ -43,24 +44,11 @@ class Chef
           vm_id = config[:vm_id]
         end
         
-        taskid=nil
-        #TODO: Stop the server
-        ui.msg("Stopping VM #{vm_id}...")
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/stop"].post "", @auth_params do |response, request, result, &block|
-          ui.msg("Result: #{response.code}")
-          # take the response and extract the taskid
-          taskid = JSON.parse(response.body)['data']
-        end
-        
-        waitfor(taskid)
+        server_stop(vm_id)
         
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}"].delete @auth_params do |response, request, result, &block|
-          ui.msg("Result: #{response.code}")
-          # take the response and extract the taskid
-          taskid = JSON.parse(response.body)['data']
+          action_response("server destroy",response)
         end
-        
-        waitfor(taskid)
         
       end
       

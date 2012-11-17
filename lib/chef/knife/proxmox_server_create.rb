@@ -10,46 +10,57 @@ class Chef
       
       # TODO: parameters for openvz should be in other object
       option :vm_hostname,
-        :short => "-N hostname",
+        :short => "-H hostname",
+        :long  => "--hostname hostname",
         :description => "VM instance hostname"
       
       option :vm_cpus,
+        :short => "-C CPUs",
         :long  => "--cpus number",
         :description => "Number of cpus of the VM instance"
         
       option :vm_memory,
+        :short => "-M MB",
         :long  => "--mem MB",
         :description => "Memory in MB"
         
       option :vm_swap,
+        :short => "-SW",
         :long  => "--swap MB",
         :description => "Memory in MB for swap"
         
       option :vm_vmid,
+        :short => "-I id",
         :long  => "--vmid id",
         :description => "Id for the VM"
         
       option :vm_disk,
+        :short => "-D disk",
         :long  => "--disk GB",
         :description => "Disk space in GB"
         
       option :vm_storage,
+        :short => "-ST name",
         :long  => "--storage name",
         :description => "Name of the storage where to reserve space"
         
       option :vm_password,
+        :short => "-P password",
         :long  => "--vm_pass password",
         :description => "root password for VM (openvz only)"
         
       option :vm_netif,
+        :short => "-N netif",
         :long  => "--netif netif_specification",
         :description => "description of the network interface (experimental)"
         
       option :vm_template,
+        :short => "-T number",
         :long  => "--template number",
         :description => "id of the template"
         
       option :vm_ipaddress,
+        :short => "-ip ipaddress",
         :long  => "--ipaddress IP Address",
         :description => "force guest to use venet interface with this ip address"
 
@@ -80,26 +91,11 @@ class Chef
         
         Chef::Log.debug(vm_definition)
         
-        taskid = nil
-        
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz"].post "#{vm_definition}", @auth_params do |response, request, result, &block|
-          ui.msg("Result: #{response.code}")
-          
-          # take the response and extract the taskid
-          taskid = JSON.parse(response.body)['data'] 
+          action_response("server create",response)
         end
         
-        waitfor(taskid)
-        
-        # TODO: It's possible to use an action defined in another class? Ex: ProxmoxServerStart.run()?
-        ui.msg("Starting VM #{vm_id}....")
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}/status/start"].post "", @auth_params do |response, request, result, &block|
-          ui.msg("Result: #{response.code}")
-          # take the response and extract the taskid
-          taskid = JSON.parse(response.body)['data']
-        end
-        
-        waitfor(taskid)
+        server_start(vm_id)
         
         #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil
       end

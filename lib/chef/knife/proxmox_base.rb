@@ -38,7 +38,7 @@ class Chef
             :proc  => Proc.new {|password| Chef::Config[:knife][:pve_user_password] = password }
             
           option :pve_user_realm,
-            :short => "-R realm",
+            :short => "-r realm",
             :long  => "--realm realm",
             :description => "Your realm of Authentication in Proxmox VE",
             :proc  => Proc.new {|realm| Chef::Config[:knife][:pve_user_realm] = realm }
@@ -159,6 +159,41 @@ class Chef
           ui.warn("Could not find a #{type_name} named #{name} to delete!")
         end
       end
+      
+      def action_response(action,response)
+        result = nil
+        taskid = nil
+        if (response.code == 200) then
+          result = "OK"
+          taskid = JSON.parse(response.body)['data']
+          waitfor(taskid)
+        else
+          result = "NOK: error code = " + response.code.to_s
+        end
+        ui.msg(result)
+        Chef::Log.debug("Action: #{action}, Result: #{result}\n")
+      end
+      
+      def server_start(vmid)
+        ui.msg("Starting VM #{vmid}....")
+        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}/status/start"].post "", @auth_params do |response, request, result, &block|
+          # take the response and extract the taskid
+          action_response("server start",response)
+        end
+        
+      end
+      
+      # server_stop: Stops the server
+      def server_stop(vmid)
+        ui.msg("Stopping VM #{vmid}...")
+        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}/status/stop"].post "", @auth_params do |response, request, result, &block|
+          # take the response and extract the taskid
+          action_response("server stop",response)
+        end
+      end
+      
+      
+      
       
     end # module
   end # class 
