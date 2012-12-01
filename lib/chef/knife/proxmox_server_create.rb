@@ -91,9 +91,7 @@ class Chef
         
         Chef::Log.debug(vm_definition)
         
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz"].post "#{vm_definition}", @auth_params do |response, request, result, &block|
-          action_response("server create",response)
-        end
+        server_create(vm_definition)
         
         server_start(vm_id)
         
