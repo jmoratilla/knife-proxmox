@@ -46,9 +46,7 @@ class Chef
         
         server_stop(vm_id)
         
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}"].delete @auth_params do |response, request, result, &block|
-          action_response("server destroy",response)
-        end
+        server_destroy(vm_id)
         
       end
       
