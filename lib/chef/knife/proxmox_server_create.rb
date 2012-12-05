@@ -91,7 +91,7 @@ class Chef
         
         Chef::Log.debug(vm_definition)
         
-        server_create(vm_definition)
+        server_create(vm_id,vm_definition)
         
         server_start(vm_id)
         

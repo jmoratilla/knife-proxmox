@@ -192,7 +192,7 @@ class Chef
         end
       end
       
-      def server_create(vm_definition)
+      def server_create(vmid,vm_definition)
         ui.msg("Creating VM #{vmid}...")
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz"].post "#{vm_definition}", @auth_params do |response, request, result, &block|
           action_response("server create",response)
