@@ -132,18 +132,6 @@ class Chef
         end
       end
       
-      # waitfor end of the task, need the taskid and the timeout
-      def waitfor(taskid, timeout=30)
-        taskstatus = nil
-        while taskstatus.nil? or timeout== 0 do
-          print "."
-          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
-            taskstatus = JSON.parse(response.body)['data']['exitstatus']
-          end
-          timeout-=1
-          sleep(1)
-        end
-      end
       
       # Extracted from Chef::Knife.delete_object, because it has a
       # confirmation step built in... By specifying the '--purge'
@@ -163,15 +151,33 @@ class Chef
       def action_response(action,response)
         result = nil
         taskid = nil
-        if (response.code == 200) then
-          result = "OK"
+        begin
+          if (response.code == 200) then
+            result = "OK"
+          else
+            result = "NOK: error code = " + response.code.to_s
+          end
           taskid = JSON.parse(response.body)['data']
           waitfor(taskid)
-        else
-          result = "NOK: error code = " + response.code.to_s
+          Chef::Log.debug("Action: #{action}, Result: #{result}\n")
+        rescue Exception => msg
+          result = "An exception ocurred.  Use -VV to show it"
+          Chef::Log.debug("Action: #{action}, Result: #{msg}\n")
         end
         ui.msg(result)
-        Chef::Log.debug("Action: #{action}, Result: #{result}\n")
+      end
+      
+      # waitfor end of the task, need the taskid and the timeout
+      def waitfor(taskid, timeout=60)
+        taskstatus = nil
+        while taskstatus.nil? and timeout>= 0 do
+          print "."
+          @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/tasks/#{taskid}/status"].get @auth_params do |response, request, result, &block|
+            taskstatus = (JSON.parse(response.body)['data']['status'] == "stopped")?true:nil
+          end
+          timeout-=1
+          sleep(1)
+        end
       end
       
       def server_start(vmid)
@@ -202,7 +208,7 @@ class Chef
       # server_destroy: Destroys the server
       def server_destroy(vmid)
         ui.msg("Destroying VM #{vmid}...")
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vm_id}"].delete @auth_params do |response, request, result, &block|
+        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}"].delete @auth_params do |response, request, result, &block|
           action_response("server destroy",response)
         end
       end

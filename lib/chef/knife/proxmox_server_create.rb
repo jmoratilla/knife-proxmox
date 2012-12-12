@@ -92,7 +92,8 @@ class Chef
         Chef::Log.debug(vm_definition)
         
         server_create(vm_id,vm_definition)
-        
+        ui.msg("Preparing the server to start")
+        sleep(5)
         server_start(vm_id)
         
         #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil

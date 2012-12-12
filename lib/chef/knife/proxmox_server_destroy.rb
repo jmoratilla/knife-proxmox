@@ -45,7 +45,8 @@ class Chef
         end
         
         server_stop(vm_id)
-        
+        ui.msg("Preparing the server to delete")
+        sleep(5)
         server_destroy(vm_id)
         
       end
