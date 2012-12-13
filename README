@@ -22,11 +22,11 @@ Some Examples
 
 List servers
 $ knife proxmox server list
-Id   Name                 Type    Status
-104  tetatet.jnlabs.isp   openvz  down  
-470  sg-node1.jnlabs.isp  openvz  up  
-102  test                 qemu    down  
-202  chef-client1         openvz  down 
+Id   Node    Name                 Type    Status
+104  node-1  tetatet.jnlabs.isp   openvz  down  
+470  node-2  sg-node1.jnlabs.isp  openvz  up  
+102  node-1  test                 qemu    down  
+202  node-2  chef-client1         openvz  down 
 
 List templates installed
 $ knife proxmox  template list -U https://localhost:8006/api2/json/ -n localhost -u test -p test123 -R pve -VV

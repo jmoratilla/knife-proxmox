@@ -15,6 +15,7 @@ class Chef
         
         server_list = [
           ui.color('Id'  , :bold),
+          ui.color('Node', :bold),
           ui.color('Name', :bold),
           ui.color('Type', :bold),
           ui.color('Status',:bold)
@@ -22,13 +23,14 @@ class Chef
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
           JSON.parse(response.body)['data'].each {|entry|
             server_list << entry['vmid'].to_s
+            server_list << entry['node']
             server_list << entry['name']
             server_list << entry['type']
             status = (entry['uptime'] == 0)?'down':'up'
             server_list << status
           }
         end
-        puts ui.list(server_list, :uneven_columns_across, 4)
+        puts ui.list(server_list, :uneven_columns_across, 5)
       end
     end
   end

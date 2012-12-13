@@ -132,6 +132,15 @@ class Chef
         end
       end
       
+      # vmid_to_node: Specify the vmid and get the node in which is
+      def vmid_to_node(vmid)
+        @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
+          data = JSON.parse(response.body)['data']
+          data.each {|entry|
+            return entry['node'] if entry['vmid'].to_s.match(vmid)
+          }
+        end
+      end
       
       # Extracted from Chef::Knife.delete_object, because it has a
       # confirmation step built in... By specifying the '--purge'
@@ -181,8 +190,9 @@ class Chef
       end
       
       def server_start(vmid)
-        ui.msg("Starting VM #{vmid}....")
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}/status/start"].post "", @auth_params do |response, request, result, &block|
+        node = vmid_to_node(vmid)
+        ui.msg("Starting VM #{vmid} on node #{node}....")
+        @connection["nodes/#{node}/openvz/#{vmid}/status/start"].post "", @auth_params do |response, request, result, &block|
           # take the response and extract the taskid
           action_response("server start",response)
         end
@@ -191,8 +201,9 @@ class Chef
       
       # server_stop: Stops the server
       def server_stop(vmid)
-        ui.msg("Stopping VM #{vmid}...")
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}/status/stop"].post "", @auth_params do |response, request, result, &block|
+        node = vmid_to_node(vmid)
+        ui.msg("Stopping VM #{vmid} on node #{node}...")
+        @connection["nodes/#{node}/openvz/#{vmid}/status/stop"].post "", @auth_params do |response, request, result, &block|
           # take the response and extract the taskid
           action_response("server stop",response)
         end
@@ -207,8 +218,9 @@ class Chef
       
       # server_destroy: Destroys the server
       def server_destroy(vmid)
-        ui.msg("Destroying VM #{vmid}...")
-        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}"].delete @auth_params do |response, request, result, &block|
+        node = vmid_to_node(vmid)
+        ui.msg("Destroying VM #{vmid} on node #{node}...")
+        @connection["nodes/#{node}/openvz/#{vmid}"].delete @auth_params do |response, request, result, &block|
           action_response("server destroy",response)
         end
       end

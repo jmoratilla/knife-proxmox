@@ -1,6 +1,11 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
 
+[2012-12-13]
+Version: 0.0.6
+* Added new field in proxmox server list to show the node the vm is in
+* Now you can start, stop, destroy a server without to specify the node
+
 [2012-12-12]
 Version: 0.0.5
 * Improved problems with selection of the node of the cluster
