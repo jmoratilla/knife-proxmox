@@ -1,50 +1,86 @@
-#
-# Author:: Adam Jacob (<adam@opscode.com>)
-# Author:: Daniel DeLeo (<dan@opscode.com>)
-# Copyright:: Copyright (c) 2008, 2010 Opscode, Inc.
-# License:: Apache License, Version 2.0
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
-
-require 'bundler'
+# -*- encoding: utf-8 -*-
 require 'rubygems'
+#require 'rake/gempackagetask'
 require 'rubygems/package_task'
-Bundler::GemHelper.install_tasks
 
+$:.push File.expand_path("../lib", __FILE__)
+require "knife-proxmox/version"
 
-desc "Validate the gemspec"
+gemspec = Gem::Specification.new do |gem|
+  gem.platform = Gem::Platform::RUBY
+  gem.name = "knife-proxmox"
+  gem.summary = %Q{ProxmoxVE Support for Chef's Knife Command}
+  gem.description = %Q{Proxmox is a very powerful Virtualization Environment.  Used with chef, you can manage servers and configure them with automatically.}
+  gem.version = Knife::Proxmox::VERSION
+  gem.email = "jorge@moratilla.com"
+  gem.homepage = "http://www.moratilla.com"
+  gem.authors = ["Jorge Moratilla"]
+  gem.extra_rdoc_files = ["README", "LICENSE", "TODO","CHANGELOG"]
+  gem.has_rdoc = false
+  
+  gem.add_development_dependency "rspec", "~>2.0.0"
+  gem.add_dependency "chef", ">= 0.10.10"
+  gem.add_dependency "rest-client", ">=1.6.7"
+  gem.add_dependency "json", ">=1.6.1"
+  gem.require_paths = ["lib"]
+  
+  files = FileList["**/*"]
+  files.exclude /\.DS_Store/
+  files.exclude /\#/
+  files.exclude /~/
+  files.exclude /\.swp/
+  files.exclude '**/._*'
+  files.exclude '**/*.orig'
+  files.exclude '**/*.rej'
+  files.exclude /^pkg/
+  files.exclude 'ripple.gemspec'
+  files.exclude 'Gemfile'
+  files.exclude 'spec/support/test_server.yml'
+
+  gem.files = files.to_a
+
+  gem.test_files = FileList["spec/**/*.rb"].to_a
+end
+
+# Gem packaging tasks
+Gem::PackageTask.new(gemspec) do |pkg|
+  pkg.need_zip = false
+  pkg.need_tar = false
+end
+
+task :gem => :gemspec
+
+desc %{Build the gemspec file.}
 task :gemspec do
   gemspec.validate
-end
- 
-desc "Build gem locally"
-task :build => :gemspec do
-  system "gem build #{gemspec.name}.gemspec"
-  FileUtils.mkdir_p "pkg"
-  FileUtils.mv "#{gemspec.name}-#{gemspec.version}.gem", "pkg"
+  File.open("#{gemspec.name}.gemspec", 'w'){|f| f.write gemspec.to_ruby }
 end
 
-desc "Remove gem locally"
-task :remove => :build do
-  system "gem uninstall #{gemspec.name}"
+desc %{Release the gem to RubyGems.org}
+task :release => :gem do
+  system "gem push pkg/#{gemspec.name}-#{gemspec.version}.gem"
 end
 
-desc "Install gem locally"
-task :install => :remove do
-  system "gem install pkg/#{gemspec.name}-#{gemspec.version}"
+=begin
+require 'rspec/core'
+require 'rspec/core/rake_task'
+
+desc "Run Unit Specs Only"
+Rspec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = "spec/ripple/**/*_spec.rb"
 end
 
+namespace :spec do
+  desc "Run Integration Specs Only"
+  Rspec::Core::RakeTask.new(:integration) do |spec|
+    spec.pattern = "spec/integration/**/*_spec.rb"
+  end
 
-desc "Let's do a full rebuild"
-task :rebuild => [:remove, :gemspec, :build, :install]
+  desc "Run All Specs"
+  Rspec::Core::RakeTask.new(:all) do |spec|
+    spec.pattern = "spec/**/*_spec.rb"
+  end
+end
+=end
+
+task :default => :spec
