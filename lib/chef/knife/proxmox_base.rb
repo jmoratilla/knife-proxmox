@@ -216,6 +216,15 @@ class Chef
         end
       end
       
+      # server_get_address: Returns the IP Address of the machine to chef
+      def server_get_address(vmid)
+        node = vmid_to_node(vmid)
+        @connection["nodes/#{node}/openvz/#{vmid}/status/current"].get @auth_params do |response, request, result, &block|
+          action_response("server get address",response)
+          ip_address = JSON.parse(response.body)['data']['ip']
+        end
+        ui.msg("VM #{vmid} has IP Address = #{ip_address}")
+      end
       # server_destroy: Destroys the server
       def server_destroy(vmid)
         node = vmid_to_node(vmid)

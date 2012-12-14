@@ -97,6 +97,7 @@ class Chef
         server_start(vm_id)
         
         #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil
+        server_get_address(vm_id)
       end
 
     end
