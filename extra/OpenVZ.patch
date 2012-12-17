@@ -1,0 +1,65 @@
+--- /usr/share/perl5/PVE/OpenVZ.pm	2012-04-26 07:05:53.000000000 +0200
++++ OpenVZ.pm	2012-12-17 09:59:59.000000000 +0100
+@@ -231,7 +231,9 @@
+ 		$ip =~ s/,;/ /g;
+ 		$d->{ip} = (split(/\s+/, $ip))[0];
+ 	    } else {
+-		$d->{ip} = '-';
++#2012-12-14: jmoratilla
++
++		$d->{ip} = read_container_network_address($vmid);
+ 	    }
+ 
+ 	    $d->{status} = 'mounted' if check_mounted($conf, $vmid);
+@@ -241,6 +243,30 @@
+ 	}
+     }
+ 
++#2012-12-14: jmoratilla
++sub read_container_network_address {
++    my ($vmid) = @_;
++
++    my $ip = "";
++
++    my $netparser = sub {
++	    my $line = shift;
++	    if ($line =~ m/(\d+)\.(\d+)\.(\d+)\.(\d+)/) {
++	        $ip = $&;
++	    }
++    };
++
++    # fixme: can we get that info directly (with vzctl exec)?
++    my $cmd = ['/usr/sbin/vzctl', 'exec', $vmid, '/bin/ip add ls dev eth0'];
++    eval { PVE::Tools::run_command($cmd, outfunc => $netparser); };
++    my $err = $@;
++    syslog('err', $err) if $err;
++
++    return ($ip);
++};
++
++
++
+     my $maxpages = ($res_unlimited / 4096);
+     my $ubchash = read_user_beancounters();
+     foreach my $vmid (keys %$ubchash) {
+@@ -1103,15 +1129,18 @@
+ 	$veconf->{netif}->{value} = $newvalue;
+     }
+ 
+-    if (defined($param->{'nameserver'})) {
++    if (defined($param->{'nameserver'})) { 
++	# remove duplicates
+ 	my $nshash = {};
++	my $newvalue = '';
+ 	foreach my $ns (PVE::Tools::split_list($param->{'nameserver'})) {
+ 	    if (!$nshash->{$ns}) {
+ 		push @$changes, '--nameserver', $ns;
+ 		$nshash->{$ns} = 1;
++		$newvalue .= $newvalue ? " $ns" : $ns;
+ 	    }
+ 	}
+-	$veconf->{'nameserver'}->{value} = join(' ', keys %$nshash);
++	$veconf->{'nameserver'}->{value} = $newvalue if $newvalue;
+     }
+ 
+     # foreach my $nv (@$changes) { print "CHANGE: $nv\n"; }
