@@ -103,7 +103,7 @@ class Chef
           data.each {|entry|
             vmids.add entry['vmid']
           }
-          vmids.max + 1
+          (vmids.max + 1).to_s
         end
       end
       
