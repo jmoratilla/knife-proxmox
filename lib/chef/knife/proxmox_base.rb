@@ -220,10 +220,10 @@ class Chef
       def server_get_address(vmid)
         node = vmid_to_node(vmid)
         @connection["nodes/#{node}/openvz/#{vmid}/status/current"].get @auth_params do |response, request, result, &block|
-          action_response("server get address",response)
-          ip_address = JSON.parse(response.body)['data']['ip']
+          #action_response("server get address",response)
+          data = JSON.parse(response.body)['data']
+          puts data.inspect
         end
-        ui.msg("VM #{vmid} has IP Address = #{ip_address}")
       end
       # server_destroy: Destroys the server
       def server_destroy(vmid)

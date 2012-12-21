@@ -227,7 +227,8 @@ sub vmstatus {
 	    $d->{diskread} = 0;
 	    $d->{diskwrite} = 0;
 
-	    if (my $ip = $conf->{ip_address}->{value}) {
+#	    if (my $ip = ($conf->{ip_address}->{value}) {
+	    if (my $ip = (read_container_network_address($vmid)) {
 		$ip =~ s/,;/ /g;
 		$d->{ip} = (split(/\s+/, $ip))[0];
 	    } else {
@@ -251,7 +252,10 @@ sub read_container_network_address {
 
     my $netparser = sub {
 	    my $line = shift;
-	    if ($line =~ m/(\d+)\.(\d+)\.(\d+)\.(\d+)/) {
+	    if ($line =~ m/(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})/ ||
+       (($1 > 0) && ($1 < 255) &&
+         ($2 <= 255) && ($3 <= 255) &&
+         ($4 > 0) && ($4 < 255))) {
 	        $ip = $&;
 	    }
     };

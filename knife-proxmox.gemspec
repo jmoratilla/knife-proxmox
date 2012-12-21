@@ -2,18 +2,18 @@
 
 Gem::Specification.new do |s|
   s.name = "knife-proxmox"
-  s.version = "0.0.3"
+  s.version = "0.0.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jorge Moratilla"]
-  s.date = "2012-12-01"
+  s.date = "2012-12-17"
   s.description = "Proxmox is a very powerful Virtualization Environment.  Used with chef, you can manage servers and configure them with automatically."
   s.email = "jorge@moratilla.com"
   s.extra_rdoc_files = ["README", "LICENSE", "TODO", "CHANGELOG"]
-  s.files = ["CHANGELOG", "TODO", "LICENSE", "knife-proxmox.gemspec", "extra/rebuild-gem.sh", "lib/chef/knife/proxmox_server_stop.rb", "lib/chef/knife/proxmox_server_start.rb", "lib/chef/knife/proxmox_base.rb", "lib/chef/knife/proxmox_template_available.rb", "lib/chef/knife/proxmox_server_destroy.rb", "lib/chef/knife/proxmox_server_list.rb", "lib/chef/knife/proxmox_server_create.rb", "lib/chef/knife/proxmox_template_list.rb", "lib/knife-proxmox/version.rb", "samples/stop_one_task_example.txt", "samples/storage_list_content_example.txt", "samples/results.txt", "samples/available_templates_to_install_example.txt", "samples/tasks_example.txt", "samples/download_template_example.txt", "samples/create_openvz_example.txt", "samples/ProxmoxAPITest.rb", "samples/get_task_status_example.txt", "samples/Rakefile", "Rakefile", "README"]
+  s.files = ["extra/README", "extra/OpenVZ.pm", "extra/abstra@esxi-2", "extra/OpenVZ.patch", "extra/rebuild-gem.sh", "knife-proxmox.gemspec", "Rakefile", "CHANGELOG", "LICENSE", "README", "samples/ProxmoxAPITest.rb", "samples/storage_list_content_example.txt", "samples/results.txt", "samples/get_task_status_example.txt", "samples/stop_one_task_example.txt", "samples/available_templates_to_install_example.txt", "samples/create_openvz_example.txt", "samples/download_template_example.txt", "samples/tasks_example.txt", "samples/ProxmoxReport.rb", "knife-proxmox-0.0.6.gem", "lib/chef/knife/proxmox_server_destroy.rb", "lib/chef/knife/server.rb", "lib/chef/knife/proxmox_server_stop.rb", "lib/chef/knife/proxmox_base.rb", "lib/chef/knife/proxmox_template_list.rb", "lib/chef/knife/proxmox_server_start.rb", "lib/chef/knife/proxmox_server_create.rb", "lib/chef/knife/template.rb", "lib/chef/knife/proxmox_template_available.rb", "lib/chef/knife/connection.rb", "lib/chef/knife/proxmox_server_list.rb", "lib/knife-proxmox/version.rb", "TODO"]
   s.homepage = "http://www.moratilla.com"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.15"
+  s.rubygems_version = "1.8.23"
   s.summary = "ProxmoxVE Support for Chef's Knife Command"
 
   if s.respond_to? :specification_version then
