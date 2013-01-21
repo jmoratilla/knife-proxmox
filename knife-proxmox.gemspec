@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files         = Dir['lib/**/*.rb'] + Dir['./*']
   s.add_dependency "chef", ">= 0.10.10"
   s.add_dependency "rest-client", ">=1.6.7"
-  s.add_dependency "json", ">=1.6.1"
+  s.add_dependency "json", ">=1.5.4"
   s.require_paths = ["lib"]
 
 end
