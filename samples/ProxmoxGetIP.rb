@@ -61,16 +61,19 @@ end
 puts 'GET'.blue
 
 # server_get_address: Returns the IP Address of the machine to chef
-def server_get_address(vmid)
+def server_get_data(vmid,field)
   @site["nodes/#{@nodename}/openvz/#{vmid}/status/current"].get @auth_params do |response, request, result, &block|
-    data = JSON.parse(response.body)['data']
-    pp data
+    data = JSON.parse(response.body)['data'][field]
   end
 end
 
-puts 'Get IP Address: '
-server_get_address(201)
-
+puts 'Get IP Address: '.yellow
+# OpenVZ up
+puts "201: #{server_get_data(201,'ip')}"
+# OpenVZ down
+puts "202: #{server_get_data(202,'ip')}"
+# Qemu doesn't work
+puts "202: #{server_get_data(102,'ip')}"
 
 =begin
 print ' list VMs: '.yellow

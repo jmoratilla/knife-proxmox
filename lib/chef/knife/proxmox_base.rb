@@ -137,7 +137,7 @@ class Chef
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
           data = JSON.parse(response.body)['data']
           data.each {|entry|
-            return entry['node'] if entry['vmid'].to_s.match(vmid)
+            return entry['node'] if entry['vmid'].to_s.match(vmid.to_s)
           }
         end
       end
@@ -202,12 +202,12 @@ class Chef
       end
       
       # server_get_address: Returns the IP Address of the machine to chef
-      def server_get_address(vmid)
+      # field is a string, and if it doesn't exist, it will return nil
+      def server_get_data(vmid,field)
         node = vmid_to_node(vmid)
         @connection["nodes/#{node}/openvz/#{vmid}/status/current"].get @auth_params do |response, request, result, &block|
-          #action_response("server get address",response)
-          data = JSON.parse(response.body)['data']
-          puts data.inspect
+          #action_response("server get data",response)
+          data = JSON.parse(response.body)['data'][field]
         end
       end
       # server_destroy: Destroys the server

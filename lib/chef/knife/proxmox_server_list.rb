@@ -24,13 +24,15 @@ class Chef
         ]
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
           JSON.parse(response.body)['data'].each {|entry|
-            server_list << entry['vmid'].to_s
+            vm_id = entry['vmid']
+            type  = entry['type']
+            server_list << vm_id.to_s
             server_list << entry['node']
             server_list << entry['name']
-            server_list << entry['type']
+            server_list << type
             status = (entry['uptime'] == 0)?'down':'up'
             server_list << status
-            ipaddress = (entry['ip_address'].nil?)?'Not Available': entry['ip_address']
+            ipaddress = (type.to_s.match('openvz'))?server_get_data(vm_id,'ip'):"Not Available"
             server_list << ipaddress
           }
         end

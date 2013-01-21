@@ -97,7 +97,7 @@ class Chef
         server_start(vm_id)
         sleep(5)
         #TODO: deberia poder conectar a la maquina y obtener su ip, asi seria todo mas facil
-        ui.msg("New Server #{vm_id} has IP Address: #{server_get_address(vm_id)}")
+        ui.msg("New Server #{vm_id} has IP Address: #{server_get_data(vm_id,'ip')}")
       end
 
     end
