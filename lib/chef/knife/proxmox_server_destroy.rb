@@ -49,6 +49,8 @@ class Chef
         sleep(5)
         server_destroy(vm_id)
         
+        #TODO: remove server from chef
+        
       end
       
     end

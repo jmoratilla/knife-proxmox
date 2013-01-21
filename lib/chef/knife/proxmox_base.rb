@@ -142,21 +142,6 @@ class Chef
         end
       end
       
-      # Extracted from Chef::Knife.delete_object, because it has a
-      # confirmation step built in... By specifying the '--purge'
-      # flag (and also explicitly confirming the server destruction!)
-      # the user is already making their intent known.  It is not
-      # necessary to make them confirm two more times.
-      def destroy_item(klass, name, type_name)
-        begin
-          object = klass.load(name)
-          object.destroy
-          ui.warn("Deleted #{type_name} #{name}")
-        rescue Net::HTTPServerException
-          ui.warn("Could not find a #{type_name} named #{name} to delete!")
-        end
-      end
-      
       def action_response(action,response)
         result = nil
         taskid = nil
@@ -231,6 +216,21 @@ class Chef
         ui.msg("Destroying VM #{vmid} on node #{node}...")
         @connection["nodes/#{node}/openvz/#{vmid}"].delete @auth_params do |response, request, result, &block|
           action_response("server destroy",response)
+        end
+      end
+      
+      # Extracted from Chef::Knife.delete_object, because it has a
+      # confirmation step built in... By specifying the '--purge'
+      # flag (and also explicitly confirming the server destruction!)
+      # the user is already making their intent known.  It is not
+      # necessary to make them confirm two more times.
+      def destroy_item(klass, name, type_name)
+        begin
+          object = klass.load(name)
+          object.destroy
+          ui.warn("Deleted #{type_name} #{name}")
+        rescue Net::HTTPServerException
+          ui.warn("Could not find a #{type_name} named #{name} to delete!")
         end
       end
       

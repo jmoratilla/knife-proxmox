@@ -20,6 +20,7 @@ class Chef
           ui.color('Type', :bold),
           ui.color('Status',:bold),
           ui.color('IP Address',:bold)
+
         ]
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
           JSON.parse(response.body)['data'].each {|entry|
@@ -29,7 +30,8 @@ class Chef
             server_list << entry['type']
             status = (entry['uptime'] == 0)?'down':'up'
             server_list << status
-            server_list << "Not Available"
+            ipaddress = (entry['ip_address'].nil?)?'Not Available': entry['ip_address']
+            server_list << ipaddress
           }
         end
         puts ui.list(server_list, :uneven_columns_across, 6)

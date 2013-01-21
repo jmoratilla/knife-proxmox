@@ -1,7 +1,7 @@
 #!/bin/sh
 
+rm knife-proxmox-?.?.?.gem
 gem uninstall knife-proxmox
-rm pkg
-rake repackage
-gem install pkg/knife-proxmox-?.?.?.gem
+gem build knife-proxmox.gemspec
+gem install ./knife-proxmox-?.?.?.gem
 rbenv rehash
