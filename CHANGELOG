@@ -1,5 +1,17 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
+[2013-01-23]
+Version: 0.0.10
+* knife proxmox server create can bootstrap a server, enabled by default
+
+[2013-01-21]
+Version: 0.0.9
+* Added IP field to server list command
+
+[2012-12-21]
+Version: 0.0.8
+* Added a patch for proxmox that allows me to fetch the IP of the guess
+* Working with the PVE API
 
 [2012-12-13]
 Version: 0.0.6

@@ -51,13 +51,30 @@ debian-6.0-wordpress_3.4.2-1_i386.tar.gz                   debian-6.0 .....
 
 
 Create a server
-$ knife proxmox server create -U https://localhost:8006/api2/json/ -n localhost -u test -p test123 -R pve -N vm-node1 --template 4 -VV 
-DEBUG: Using configuration from /home/jorge/workspace/chef-repo/.chef/knife.rb
-DEBUG: vmid=303&hostname=vm-node1&storage=local&password=pve123&ostemplate=local%3Avztmpl%2Fubuntu-11.10-x86_64-jorge2-.tar.gz&memory=512&swap=512&disk=4&cpus=1&netif=ifname%3Deth0%2Cbridge%3Dvmbr0
-Result: 200
-..............................
-Starting VM 303....
-Result: 200
+$  knife proxmox server create -n ankh -r "recipe[java]" -C 2 -M 1024 -H example-server -P test123 -T 4
+Creating VM 473...
+..............OK
+Preparing the server to start
+Starting VM 473 on node ankh....
+..OK
+New Server 473 has IP Address: 10.0.2.19
+done
+Bootstrapping Chef on 10.0.2.19
+10.0.2.19 --2013-01-23 01:27:20--  http://opscode.com/chef/install.sh
+10.0.2.19 Resolving opscode.com... 
+10.0.2.19 184.106.28.83
+10.0.2.19 Connecting to opscode.com|184.106.28.83|:80... 
+10.0.2.19 connected.
+10.0.2.19 HTTP request sent, awaiting response... 
+10.0.2.19 301 Moved Permanently
+10.0.2.19 Location: http://www.opscode.com/chef/install.sh [following]
+10.0.2.19 --2013-01-23 01:27:21--  http://www.opscode.com/chef/install.sh
+10.0.2.19 Resolving www.opscode.com... 
+10.0.2.19 184.106.28.83
+10.0.2.19 Reusing existing connection to opscode.com:80.
+10.0.2.19 HTTP request sent, awaiting response... 
+10.0.2.19 200 OK
+
 
 Starting a server
 $ knife proxmox server start --vmid 401

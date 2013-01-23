@@ -16,6 +16,9 @@ class Chef
             require 'cgi'
             require 'chef/log'
             require 'set'
+            require 'net/ssh/multi'
+            require 'chef/knife/bootstrap'
+            Chef::Knife::Bootstrap.load_deps
           end
           
           # options
@@ -105,6 +108,12 @@ class Chef
           }
           (vmids.max + 1).to_s
         end
+      end
+
+      # locate_config_value: find a value in arguments or default chef config properties
+      def locate_config_value(key)
+        key = key.to_sym
+        Chef::Config[:knife][key] || config[key]
       end
       
       # template_number_to_name: converts the id from the template list to the real name in the storage
