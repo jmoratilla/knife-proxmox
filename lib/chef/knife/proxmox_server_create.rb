@@ -210,12 +210,12 @@ class Chef
         # bootstrap.config[:host_key_verify] = config[:host_key_verify]
         bootstrap.config[:chef_node_name] = config[:vm_hostname]
         # bootstrap.config[:prerelease] = config[:prerelease]
-        # bootstrap.config[:bootstrap_version] = locate_config_value(:bootstrap_version)
-        # bootstrap.config[:distro] = locate_config_value(:distro)
+        bootstrap.config[:bootstrap_version] = locate_config_value(:bootstrap_version)
+        bootstrap.config[:distro] = locate_config_value(:distro)
         # bootstrap will run as root...sudo (by default) also messes up Ohai on CentOS boxes
         # bootstrap.config[:use_sudo] = false
-        # bootstrap.config[:template_file] = locate_config_value(:template_file)
-        # bootstrap.config[:environment] = config[:environment]
+        bootstrap.config[:template_file] = locate_config_value(:template_file)
+        bootstrap.config[:environment] = config[:environment]
         bootstrap
       end
     end

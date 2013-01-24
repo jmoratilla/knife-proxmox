@@ -63,41 +63,15 @@ puts 'GET'.blue
 # server_get_address: Returns the IP Address of the machine to chef
 def server_get_data(vmid,field)
   @site["nodes/#{@nodename}/openvz/#{vmid}/status/current"].get @auth_params do |response, request, result, &block|
-    data = JSON.parse(response.body)['data'][field]
+    data = (field.match("all"))?JSON.parse(response.body)['data'] : JSON.parse(response.body)['data'][field]
   end
 end
 
+
 puts 'Get IP Address: '.yellow
-# OpenVZ up
-puts "201: #{server_get_data(201,'ip')}"
-# OpenVZ down
-puts "202: #{server_get_data(202,'ip')}"
-# Qemu doesn't work
-puts "202: #{server_get_data(102,'ip')}"
+puts "Enter the vmid of the server"
+vmid = gets.chomp
+puts "Enter the field to get (all for all)"
+field = gets.chomp
 
-=begin
-print ' list VMs: '.yellow
-site['cluster/resources?type=vm'].get auth_params do |response, request, result, &block|
-  puts "#{response.code}"
-  data = JSON.parse(response.body)['data']
-  data.each {|entry|
-    puts "#{entry['name']}:"
-    entry.keys.sort.each {|key|
-      puts "\t#{key}: #{entry[key]}" unless key == 'name'
-      
-    }
-  }
-end
-
-print ' list Nodes: '.yellow
-site['cluster/resources?type=node'].get auth_params do |response, request, result, &block|
-  puts "#{response.code}"
-  data = JSON.parse(response.body)['data']
-  data.each {|entry|
-    puts "#{entry['node']}:"
-    entry.keys.sort.each {|key|
-      puts "\t#{key}: #{entry[key]}" unless key == 'node'
-    }
-  }
-end
-=end
+pp "#{vmid}: #{server_get_data(vmid,field)}"
