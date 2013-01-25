@@ -17,10 +17,8 @@ class Chef
             require 'chef/log'
             require 'set'
             require 'net/ssh/multi'
-            require 'chef/knife/bootstrap'
             require 'chef/api_client'
             require 'chef/node'
-            Chef::Knife::Bootstrap.load_deps
           end
           
           # options

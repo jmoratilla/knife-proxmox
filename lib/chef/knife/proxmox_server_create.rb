@@ -6,6 +6,13 @@ class Chef
       
       include Knife::ProxmoxBase
       
+      deps do
+        require 'readline'
+        require 'chef/json_compat'
+        require 'chef/knife/bootstrap'
+        Chef::Knife::Bootstrap.load_deps
+      end
+      
       banner "knife proxmox server create (options)"
       
       # TODO: parameters for openvz should be in other object
@@ -115,8 +122,10 @@ class Chef
         :default => true
 
       option :environment,
-        :long => "--environment",
+        :short=> "-e environment",
+        :long => "--environment environment",
         :description => "Chef environment",
+        :proc => Proc.new {|env| Chef::Config[:knife][:environment] = env },
         :default => '_default'
 
       def run
@@ -203,6 +212,7 @@ class Chef
         bootstrap = Chef::Knife::Bootstrap.new
         bootstrap.name_args = [bootstrap_ip_address]
         bootstrap.config[:run_list] = config[:run_list]
+        bootstrap.config[:environment] = locate_config_value(:environment)
         # bootstrap.config[:first_boot_attributes] = config[:first_boot_attributes]
         bootstrap.config[:ssh_user] = "root"
         bootstrap.config[:ssh_password] = config[:vm_password]
@@ -215,7 +225,8 @@ class Chef
         # bootstrap will run as root...sudo (by default) also messes up Ohai on CentOS boxes
         # bootstrap.config[:use_sudo] = false
         bootstrap.config[:template_file] = locate_config_value(:template_file)
-        bootstrap.config[:environment] = config[:environment]
+        
+        pp bootstrap.config
         bootstrap
       end
     end
