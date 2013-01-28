@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.has_rdoc = false
   s.authors     = ["Jorge Moratilla", "Sergio Galvan"]
   s.email       = ["jorge@moratilla.com","sergalma@gmail.com"]
-  s.homepage = "http://wiki.opscode.com/display/chef"
+  s.homepage = "https://bitbucket.org/jmoratilla/knife-proxmox"
   s.summary = "ProxmoxVE Support for Chef's Knife Command"
   s.description = s.summary
   s.extra_rdoc_files = ["README", "LICENSE","TODO","CHANGELOG" ]
