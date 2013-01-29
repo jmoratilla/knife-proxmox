@@ -6,13 +6,6 @@ class Chef
       
       include Knife::ProxmoxBase
       
-      deps do
-        require 'readline'
-        require 'chef/json_compat'
-        require 'chef/knife/bootstrap'
-        Chef::Knife::Bootstrap.load_deps
-      end
-      
       banner "knife proxmox server create (options)"
       
       # TODO: parameters for openvz should be in other object
