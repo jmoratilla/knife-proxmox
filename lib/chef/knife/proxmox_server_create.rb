@@ -202,6 +202,8 @@ class Chef
       end
 
       def bootstrap_for_node(bootstrap_ip_address)
+        require 'chef/knife/bootstrap'
+        Chef::Knife::Bootstrap.load_deps
         bootstrap = Chef::Knife::Bootstrap.new
         bootstrap.name_args = [bootstrap_ip_address]
         bootstrap.config[:run_list] = config[:run_list]
