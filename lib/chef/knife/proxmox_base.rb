@@ -216,9 +216,15 @@ class Chef
         node = vmid_to_node(vmid)
         @connection["nodes/#{node}/openvz/#{vmid}/status/current"].get @auth_params do |response, request, result, &block|
           #action_response("server get data",response)
-          data = JSON.parse(response.body)['data'][field]
+          # (field.match('all'))?JSON.parse(response.body)['data'].to_json : JSON.parse(response.body)['data'][field]
+          if (field == 'all') then
+            JSON.parse(response.body)['data']
+          else
+            JSON.parse(response.body)['data'][field]
+          end
         end
       end
+
       # server_destroy: Destroys the server
       def server_destroy(vmid)
         node = vmid_to_node(vmid)

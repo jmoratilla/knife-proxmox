@@ -11,6 +11,7 @@ Currently it only supports management of openVZ instances, but KVM instances wil
 Actions implemented
 
 proxmox server list
+proxmox server info
 proxmox server create
 proxmox server start
 proxmox server stop
@@ -23,10 +24,38 @@ Some Examples
 List servers
 $ knife proxmox server list
 Id   Node    Name                 Type    Status
-104  node-1  tetatet.jnlabs.isp   openvz  down  
-470  node-2  sg-node1.jnlabs.isp  openvz  up  
+104  node-1  tetatet.example.com  openvz  down  
+470  node-2  sg-node1.example.com openvz  up  
 102  node-1  test                 qemu    down  
 202  node-2  chef-client1         openvz  down 
+
+Get info for a server
+$ knife proxmox server info -H tetatet.example.com -P ip
+192.168.1.1
+
+$ knife proxmox server info -H tetatet.example.com
+knife proxmox server info -H tetatet.example.com -P ip
+cpu:       0.00281876923420022
+cpus:      2
+disk:      5833015296
+diskread:  316895232
+diskwrite: 3805184
+failcnt:   0
+ha:        0
+ip:        192.168.42.200
+maxdisk:   8589934592
+maxmem:    4294967296
+maxswap:   536870912
+mem:       1145778176
+name:      tetatet.example.com
+netin:     27888604
+netout:    2829601
+nproc:     140
+status:    running
+swap:      54460416
+type:      openvz
+uptime:    61018
+
 
 List templates installed
 $ knife proxmox  template list -U https://localhost:8006/api2/json/ -n localhost -u test -p test123 -R pve -VV

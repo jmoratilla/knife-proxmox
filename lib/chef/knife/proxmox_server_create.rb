@@ -156,7 +156,7 @@ class Chef
         
         # which IP address to bootstrap
         bootstrap_ip_address = server_get_data(vm_id,'ip')
-        ui.msg("New Server #{vm_id} has IP Address: #{server_get_data(vm_id,'ip')}")
+        ui.msg("New Server #{vm_id} has IP Address: #{bootstrap_ip_address}")
         
         if bootstrap_ip_address.nil?
           ui.error("No IP address available for bootstrapping.")
