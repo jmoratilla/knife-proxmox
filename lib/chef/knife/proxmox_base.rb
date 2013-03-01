@@ -141,13 +141,17 @@ class Chef
         end
       end
       
-      # vmid_to_node: Specify the vmid and get the node in which is
+      # vmid_to_node: Specify the vmid and get the node in which is. nil otherwise
       def vmid_to_node(vmid)
+        node = nil
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
           data = JSON.parse(response.body)['data']
           data.each {|entry|
-            return entry['node'] if entry['vmid'].to_s.match(vmid.to_s)
+            if entry['vmid'].to_s.match(vmid.to_s) then
+              node = entry['node'] 
+            end
           }
+          return node
         end
       end
       
@@ -201,6 +205,9 @@ class Chef
           # take the response and extract the taskid
           action_response("server stop",response)
         end
+        rescue Exception => e
+          ui.warn("The VMID does not match any node")
+          exit 1
       end
       
       def server_create(vmid,vm_definition)

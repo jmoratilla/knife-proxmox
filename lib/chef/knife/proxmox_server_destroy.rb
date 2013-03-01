@@ -43,10 +43,15 @@ class Chef
           vm_id = config[:vm_id]
         end
         
-        server_stop(vm_id)
-        ui.msg("Preparing the server to delete")
-        sleep(5)
-        server_destroy(vm_id)
+        begin
+          server_stop(vm_id)
+          ui.msg("Preparing the server to delete")
+          sleep(5)
+          server_destroy(vm_id)
+        rescue Exception => e
+          ui.warn("Error trying to destroy the server. Does the server exists?")
+          exit 1
+        end
         
         #TODO: remove server from chef
         if config[:purge]
