@@ -1,13 +1,13 @@
 HOW-TO FIX PROXMOX TO GET AN IP ADDRESS FROM A RECENTLY CREATED OPENVZ
 
-Patch the original file with this modification (only valid for Proxmox VE version):
+Patch the original file with this modification (only valid for Proxmox VE 2.2 version):
 
 $ pvesh get version
 200 OK
 {
-   "release" : "1",
-   "repoid" : "f9b0f63a",
-   "version" : "2.1"
+   "release" : "26",
+   "repoid" : "c1614c8c",
+   "version" : "2.2"
 }
 
 Apply the patch with:
@@ -15,4 +15,4 @@ Apply the patch with:
 cd /usr/share/perl5/PVE
 sudo patch < OpenVZ.patch
 
-
+Finally, you'll need to restart your proxmox server to apply the changes.

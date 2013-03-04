@@ -19,6 +19,9 @@ class Chef
             require 'net/ssh/multi'
             require 'chef/api_client'
             require 'chef/node'
+            require 'readline'
+            require 'chef/knife/bootstrap'
+            Chef::Knife::Bootstrap.load_deps
           end
           
           # options
