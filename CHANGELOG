@@ -1,5 +1,10 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
+
+[2013-04-29]
+Version: 0.0.17
+* knife proxmox server destroy now requests confirmation to delete a server
+
 [2013-01-23]
 Version: 0.0.10
 * knife proxmox server create can bootstrap a server, enabled by default

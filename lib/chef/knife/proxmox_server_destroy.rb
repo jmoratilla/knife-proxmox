@@ -37,8 +37,9 @@ class Chef
           exit 1
         elsif (!config[:chef_node_name].nil?)
             name = config[:chef_node_name]
-            puts "Server to destroy: #{name}"
             vm_id = server_name_to_vmid(name)
+            puts "Server to destroy: #{name} [vmid: #{vm_id}]"
+            ui.confirm("Continue")
         else
           vm_id = config[:vm_id]
         end

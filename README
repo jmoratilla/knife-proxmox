@@ -121,7 +121,8 @@ Result: 200
 Destroy a server
 $ knife proxmox server destroy -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve -N vm-node1 -VV
 DEBUG: Using configuration from /home/jorge/workspace/chef-repo/.chef/knife.rb
-node to destroy: vm-node1
+node to destroy: vm-node1 [vmid: 200]
+Continue? (Y/N) y
 Stopping VM 303....
 Result: 200
 ..............................
