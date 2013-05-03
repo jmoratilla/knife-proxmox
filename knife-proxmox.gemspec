@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.homepage = "https://bitbucket.org/jmoratilla/knife-proxmox"
   s.summary = "ProxmoxVE Support for Chef's Knife Command"
   s.description = s.summary
-  s.extra_rdoc_files = ["README", "LICENSE","TODO","CHANGELOG" ]
+  s.extra_rdoc_files = ["README.md", "LICENSE","TODO","CHANGELOG" ]
 
   s.files         = Dir['lib/**/*.rb'] + Dir['./*']
   s.add_dependency "chef", ">= 0.10.10"

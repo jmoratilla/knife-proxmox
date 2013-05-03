@@ -9,6 +9,11 @@ class Chef
 
       banner "knife proxmox server list (options)"
 
+      option :field,
+             :short => "-f field",
+             :field  => "--field field",
+             :description => "Sort by field <field>"
+
       def run
         # Needed
         connection
@@ -20,10 +25,12 @@ class Chef
           ui.color('Type', :bold),
           ui.color('Status',:bold),
           ui.color('IP Address',:bold)
-
         ]
+
+        field = config[:field] || 'vmid'
+
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
-          JSON.parse(response.body)['data'].each {|entry|
+          JSON.parse(response.body)['data'].sort_by{ |entry| entry[field] }.each {|entry|
             vm_id = entry['vmid']
             type  = entry['type']
             server_list << vm_id.to_s
