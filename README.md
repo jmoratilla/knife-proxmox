@@ -38,10 +38,10 @@ Then install your ruby language (recommended ruby-1.9.3-xxx)
 ### List servers
     $ knife proxmox server list
     Id   Node    Name                 Type    Status
-    104  node-1  tetatet.example.com  openvz  down
-    470  node-2  sg-node1.example.com openvz  up
     102  node-1  test                 qemu    down
+    104  node-1  tetatet.example.com  openvz  down
     202  node-2  chef-client1         openvz  down
+    470  node-2  sg-node1.example.com openvz  up
 
 ### Get info for a server
     $ knife proxmox server info -H tetatet.example.com -P ip

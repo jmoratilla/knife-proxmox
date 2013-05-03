@@ -1,6 +1,10 @@
 Author: Jorge Moratilla
 Date: 2012-10-07
 
+[2013-05-07]
+Version: 0.0.18
+* knife proxmox server list now sorts output by vmid (default) and by field (vmid, node, name)
+
 [2013-04-29]
 Version: 0.0.17
 * knife proxmox server destroy now requests confirmation to delete a server
