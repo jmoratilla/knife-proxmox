@@ -26,6 +26,11 @@ class Chef
         :long  => "--vmid number",
         :description => "The numeric identifier of the VM"
 
+      option :force,
+        :short => "-y",
+        :long  => "--yes",
+        :description => "Force answer to yes (useful for scripting)"
+
       def run
         # Needed
         connection
@@ -39,7 +44,9 @@ class Chef
             name = config[:chef_node_name]
             vm_id = server_name_to_vmid(name)
             puts "Server to destroy: #{name} [vmid: #{vm_id}]"
-            ui.confirm("Continue")
+            if (config[:force].nil?) then
+              ui.confirm("Continue")
+            end
         else
           vm_id = config[:vm_id]
         end

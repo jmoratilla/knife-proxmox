@@ -133,7 +133,7 @@ Then install your ruby language (recommended ruby-1.9.3-xxx)
 
 
 ### Destroy a server
-    $ knife proxmox server destroy -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve -N vm-node1 -VV
+    $ knife proxmox server destroy -U https://localhost:8006/api2/json/ -u test -p test123 -n localhost -R pve -N vm-node1 -VV -P
     DEBUG: Using configuration from /home/jorge/workspace/chef-repo/.chef/knife.rb
     node to destroy: vm-node1 [vmid: 200]
     Continue? (Y/N) y
@@ -141,6 +141,9 @@ Then install your ruby language (recommended ruby-1.9.3-xxx)
     Result: 200
     ..............................
     Result: 200
+    WARNING: Deleted node vm-node1
+    WARNING: Deleted client vm-node1
+
 
 ## Installation
 
@@ -172,6 +175,12 @@ If you want to alter some variable by command line then you can use the followin
 -u --username <user>   Same for user
 -p --password <pass>   Same for password
 -r --realm    <realm>  Same for the realm used to authenticate
+
+There is a script in extra/set_environment_variables.sh that creates the
+set of variables needed for knife-proxmox. Just answer the questions and
+paste the output into your profile file.
+
+
 
 ### ABOUT CHEF AND PROXMOX
 

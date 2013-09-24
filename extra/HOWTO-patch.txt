@@ -1,0 +1,20 @@
+HOW TO CREATE A PATCH
+=====================
+To create a patch of a single file, change to the directory where the file
+is located and call diff to create the patch.
+
+$ diff -u original.c new.c > original.patch
+
+
+HOW TO APPLY A PATCH
+====================
+
+To apply a patch to a single file, change to the directory where the file
+is located and call patch:
+
+$ patch < foo.patch
+
+
+THANKS TO
+=========
+* http://jungels.net/articles/diff-patch-ten-minutes.html

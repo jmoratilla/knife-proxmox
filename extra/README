@@ -1,6 +1,16 @@
 HOW-TO FIX PROXMOX TO GET AN IP ADDRESS FROM A RECENTLY CREATED OPENVZ
 
-Patch the original file with this modification (only valid for Proxmox VE 2.2 version):
+
+Abstract:
+
+This patch allows you to get the ipaddress assigned to a container
+when it is configure with DHCP.
+
+
+Warning:
+
+Patch the original file with this modification (only valid for Proxmox 
+VE 2.2 version and newer):
 
 $ pvesh get version
 200 OK
@@ -10,9 +20,20 @@ $ pvesh get version
    "version" : "2.2"
 }
 
-Apply the patch with:
+
+
+Instructions:
+
+Go to the subdirectory of the Proxmox VE you are trying to Patch.  Copy
+OpenVZ.patch to your target server and then, apply the patch with:
 
 cd /usr/share/perl5/PVE
-sudo patch < OpenVZ.patch
+sudo patch < /path/to/OpenVZ.patch
 
 Finally, you'll need to restart your proxmox server to apply the changes.
+
+NOTE HERE:
+
+Everytime the server is upgraded, you must apply the patch in order to 
+keep this feature working.
+
