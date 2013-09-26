@@ -7,7 +7,7 @@ class Chef
 
       include Knife::ProxmoxBase
 
-      banner "knife proxmox server start (options)"
+      banner "knife proxmox server stop (options)"
 
       option :vm_id,
         :short => "-I number",

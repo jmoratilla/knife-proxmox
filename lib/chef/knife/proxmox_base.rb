@@ -190,6 +190,7 @@ class Chef
         end
       end
       
+      # server_start: Starts the server
       def server_start(vmid)
         node = vmid_to_node(vmid)
         ui.msg("Starting VM #{vmid} on node #{node}....")
@@ -208,11 +209,27 @@ class Chef
           # take the response and extract the taskid
           action_response("server stop",response)
         end
+        # TODO: check with server_get_data the status/current/status of the vmid to send the umount command
         rescue Exception => e
           ui.warn("The VMID does not match any node")
           exit 1
       end
       
+      # server_unmount: Unmounts the server's filesystem
+      def server_umount(vmid)
+        node = vmid_to_node(vmid)
+        ui.msg("Unmounting VM #{vmid} on node #{node}...")
+        @connection["nodes/#{node}/openvz/#{vmid}/status/umount"].post "", @auth_params do |response, request, result, &block|
+          # take the response and extract the taskid
+          action_response("server umount",response)
+        end
+        rescue Exception => e
+          ui.warn("The VMID does not match any node")
+          exit 1
+      end
+
+      
+      # server_create: Sends a vm_definition to proxmox for creation
       def server_create(vmid,vm_definition)
         ui.msg("Creating VM #{vmid}...")
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz"].post "#{vm_definition}", @auth_params do |response, request, result, &block|
@@ -234,7 +251,7 @@ class Chef
           end
         end
       end
-
+      
       # server_destroy: Destroys the server
       def server_destroy(vmid)
         node = vmid_to_node(vmid)
