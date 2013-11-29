@@ -236,14 +236,26 @@ class Chef
           action_response("server create",response)
         end
       end
-      
-      # server_get_address: Returns the IP Address of the machine to chef
-      # field is a string, and if it doesn't exist, it will return nil
+
+      # server_modify: Sends a vm_definition to a running VM 
+      # data: 
+      # PUT /api2/json/nodes/esxi-2/openvz/170/config
+      #   memory:2048
+      #   swap:512
+      #   disk:16
+      #   cpus:4
+      #   digest:8aa1d235c7d324915691c137cde90013f4717c84
+      def server_modify(vmid,vm_definition)
+        ui.msg("Modifying VM #{vmid}...")
+        @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}/config"].put "#{vm_definition}", @auth_params do |response, request, result, &block|
+          action_response("server modify",response)
+        end
+      end
+
+      # server_get_data: Returns the parameter requested, or all 
       def server_get_data(vmid,field)
         node = vmid_to_node(vmid)
         @connection["nodes/#{node}/openvz/#{vmid}/status/current"].get @auth_params do |response, request, result, &block|
-          #action_response("server get data",response)
-          # (field.match('all'))?JSON.parse(response.body)['data'].to_json : JSON.parse(response.body)['data'][field]
           if (field == 'all') then
             JSON.parse(response.body)['data']
           else
@@ -251,7 +263,7 @@ class Chef
           end
         end
       end
-      
+
       # server_destroy: Destroys the server
       def server_destroy(vmid)
         node = vmid_to_node(vmid)
