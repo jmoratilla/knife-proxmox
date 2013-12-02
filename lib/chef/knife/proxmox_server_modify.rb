@@ -52,19 +52,18 @@ class Chef
         vm_config[:disk]     = config[:vm_disk]     || nil #server_get_data(vm_id,"disk")
         vm_config[:swap]     = config[:vm_swap]     || nil #server_get_data(vm_id,"swap")
         
-        #vm_definition = "memory=#{vm_memory}&swap=#{vm_swap}&disk=#{vm_disk}&cpus=#{vm_cpus}"
-        #vm_definition = "cpus=#{vm_cpus.to_i}&memory=#{'1024'.to_i}"
         vm_mod_op = vm_config.keys.select { |v| vm_config[v] }
-        vm_definition = ""
+        vm_definition = []
         vm_mod_op.each do |k|
-          vm_definition << k.to_s << "=" << vm_config[k].to_s
+          # volver a usar el inject
+          vm_definition << "#{k.to_s}=#{vm_config[k].to_i}" unless k == :id
         end
-        puts vm_definition
+        vm_modification = vm_definition.join('&').to_s
         
-        Chef::Log.debug(vm_definition)
         
-        server_modify(vm_id,vm_definition)
-        
+        Chef::Log.debug(vm_modification)
+        server_modify(vm_config[:id],vm_modification)
+
       end
 
     end

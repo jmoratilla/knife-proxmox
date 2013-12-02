@@ -167,14 +167,15 @@ class Chef
           else
             result = "NOK: error code = " + response.code.to_s
           end
-          taskid = JSON.parse(response.body)['data']
-          waitfor(taskid)
+          ui.msg(result)
+          taskid = JSON.parse(response.body)['data'] || nil
+          waitfor(taskid) unless taskid.nil?
           Chef::Log.debug("Action: #{action}, Result: #{result}\n")
         rescue Exception => msg
           result = "An exception ocurred.  Use -VV to show it"
-          Chef::Log.debug("Action: #{action}, Result: #{msg}\n")
+          Chef::Log.debug("Task ID: " + taskid.to_s + ", Class: " + taskid.class)
+          Chef::Log.debug("Action: #{action}, Return code: #{response.code}, Exception: #{msg}\n")
         end
-        ui.msg(result)
       end
       
       # waitfor end of the task, need the taskid and the timeout
@@ -240,11 +241,13 @@ class Chef
       # server_modify: Sends a vm_definition to a running VM 
       # data: 
       # PUT /api2/json/nodes/esxi-2/openvz/170/config
-      #   memory:2048
-      #   swap:512
-      #   disk:16
-      #   cpus:4
-      #   digest:8aa1d235c7d324915691c137cde90013f4717c84
+      #   { 
+      #     memory=>2048
+      #     swap=>512
+      #     disk=>16
+      #     cpus=>4
+      #   }
+      # Definition must be a JSON
       def server_modify(vmid,vm_definition)
         ui.msg("Modifying VM #{vmid}...")
         @connection["nodes/#{Chef::Config[:knife][:pve_node_name]}/openvz/#{vmid}/config"].put "#{vm_definition}", @auth_params do |response, request, result, &block|
