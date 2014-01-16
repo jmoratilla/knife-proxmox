@@ -63,7 +63,7 @@ class Chef
         
         #TODO: remove server from chef
         if config[:purge]
-          thing_to_delete = config[:chef_node_name] || server_get_data(config[:vm_id],"name")
+          thing_to_delete = config[:chef_node_name] || vmid_to_server_name(vm_id)
           destroy_item(Chef::Node, thing_to_delete, "node")
           destroy_item(Chef::ApiClient, thing_to_delete, "client")
         else

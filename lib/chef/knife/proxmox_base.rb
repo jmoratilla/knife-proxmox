@@ -143,6 +143,16 @@ class Chef
           }
         end
       end
+
+      # vmid_to_server_name: Use the name of the server to get the vmid
+      def vmid_to_server_name(vmid)
+        @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
+          data = JSON.parse(response.body)['data']
+          data.each {|entry|
+            return entry['name'] if entry['vmid'] = vmid
+          }
+        end
+      end
       
       # vmid_to_node: Specify the vmid and get the node in which is. nil otherwise
       def vmid_to_node(vmid)
