@@ -37,6 +37,7 @@ class Chef
         
         #TODO: must detect which parameter has been used: name or vmid
         vm_id = nil
+        name  = nil
         if (config[:vm_id].nil? and config[:chef_node_name].nil?) then
           ui.error("You must use -I <id> or -H <Hostname>")
           exit 1
@@ -48,6 +49,7 @@ class Chef
               ui.confirm("Continue")
             end
         else
+          name  = vmid_to_server_name(vm_id)
           vm_id = config[:vm_id]
         end
         
@@ -63,7 +65,8 @@ class Chef
         
         #TODO: remove server from chef
         if config[:purge]
-          thing_to_delete = config[:chef_node_name] || vmid_to_server_name(vm_id)
+          thing_to_delete = config[:chef_node_name] || name
+          puts "Thing_to_delete: #{thing_to_delete}"
           destroy_item(Chef::Node, thing_to_delete, "node")
           destroy_item(Chef::ApiClient, thing_to_delete, "client")
         else

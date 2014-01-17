@@ -138,19 +138,23 @@ class Chef
       def server_name_to_vmid(name)
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
           data = JSON.parse(response.body)['data']
+          result = nil
           data.each {|entry|
-            return entry['vmid'] if entry['name'].to_s.match(name)
+            result =  entry['vmid'] if entry['name'].to_s.match(name)
           }
+          result
         end
       end
 
-      # vmid_to_server_name: Use the name of the server to get the vmid
+      # vmid_to_server_name: Use the id of the server to get the name
       def vmid_to_server_name(vmid)
         @connection['cluster/resources?type=vm'].get @auth_params do |response, request, result, &block|
           data = JSON.parse(response.body)['data']
+          result = nil
           data.each {|entry|
-            return entry['name'] if entry['vmid'] = vmid
+            result = entry['name'] if entry['vmid'] == vmid.to_i
           }
+          result
         end
       end
       
@@ -177,9 +181,9 @@ class Chef
           else
             result = "NOK: error code = " + response.code.to_s
           end
-          ui.msg(result)
           taskid = JSON.parse(response.body)['data'] || nil
           waitfor(taskid) unless taskid.nil?
+          ui.msg(result)
           Chef::Log.debug("Action: #{action}, Result: #{result}\n")
         rescue Exception => msg
           result = "An exception ocurred.  Use -VV to show it"
