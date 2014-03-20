@@ -3,6 +3,7 @@
 Authors: Jorge Moratilla, Sergio Galvan
 Date: 2012-10-07
 
+[![Gem Version](https://badge.fury.io/rb/knife-proxmox.png)](http://badge.fury.io/rb/knife-proxmox)
 
 ## Description
 
