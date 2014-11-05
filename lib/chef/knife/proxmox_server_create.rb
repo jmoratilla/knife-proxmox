@@ -208,7 +208,7 @@ class Chef
         bootstrap.name_args = [bootstrap_ip_address]
         bootstrap.config[:run_list] = config[:run_list]
         bootstrap.config[:environment] = locate_config_value(:environment)
-        # bootstrap.config[:first_boot_attributes] = config[:first_boot_attributes]
+        bootstrap.config[:first_boot_attributes] = config[:first_boot_attributes]
         bootstrap.config[:ssh_user] = "root"
         bootstrap.config[:ssh_password] = config[:vm_password]
         # bootstrap.config[:identity_file] = config[:identity_file]
