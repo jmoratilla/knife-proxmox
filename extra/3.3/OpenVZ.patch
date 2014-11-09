@@ -1,0 +1,41 @@
+--- OpenVZ.pm~	2014-11-09 00:20:42.000000000 +0200
++++ OpenVZ.pm	2014-11-09 00:21:20.000000000 +0200
+@@ -231,7 +231,7 @@
+ 		$ip =~ s/,;/ /g;
+ 		$d->{ip} = (split(/\s+/, $ip))[0];
+ 	    } else {
+-	        $d->{ip} = '-';
++	        $d->{ip} = read_container_network_address($vmid);
+ 	    }
+ 
+ 	    $d->{status} = 'mounted' if check_mounted($conf, $vmid);
+@@ -417,6 +417,29 @@
+     },
+ };
+ 
++# 2013-09-24: jmoratilla
++# get main IP from the container (eth0)
++sub read_container_network_address {
++    my ($vmid) = @_;
++    my $ip = "";
++
++    my $netparser = sub {
++        my $line = shift;
++        if ($line =~ m/(\d+)\.(\d+)\.(\d+)\.(\d+)/) {
++            $ip = $&;
++        }
++    };
++
++    my $cmd =  ['/usr/sbin/vzctl','exec',$vmid,'/bin/ip add ls dev eth0'];
++    eval { PVE::Tools::run_command($cmd, outfunc => $netparser); };
++
++    my $err = $@;
++    syslog('err', $err) if $err;
++
++    return ($ip);
++
++};
++
+ # add JSON properties for create and set function
+ sub json_config_properties {
+     my $prop = shift;
